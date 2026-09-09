@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mx Pro Fighter | Todo para tu entrenamiento y pasión deportiva en un solo lugar</title>
+  
+  <!-- Tailwind CSS CDN con configuración personalizada -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#dc2626',
+              darkred: '#991b1b',
+              gold: '#f59e0b',
+              dark: '#090a0f',
+              surface: '#12141c',
+              border: '#232736'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    details summary::-webkit-details-marker { display: none; }
+    details summary { list-style: none; }
+  </style>
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- ========================================================= -->
+  <!-- 0. TOPBAR: BENEFICIOS, CERTIFICACIONES & UBICACIÓN        -->
+  <!-- ========================================================= -->
+  <div class="bg-gradient-to-r from-red-700 via-red-600 to-amber-600 text-white text-xs py-2 px-4 text-center font-bold tracking-wide flex items-center justify-center gap-x-4 gap-y-1 flex-wrap shadow-md">
+    <span>🥋 <strong>DISTRIBUIDOR OFICIAL ASIANA &amp; TUSAH:</strong> Equipamiento Homologado WT (World Taekwondo) y WKF (World Karate Federation)</span>
+    <span class="hidden md:inline">•</span>
+    <span>🔥 <strong>MAYOREO MIXTO:</strong> Desde 5 piezas con hasta 5% OFF o regalos</span>
+    <span class="hidden md:inline">•</span>
+    <span>💳 Hasta 3 MSI en compras de $10,000+ MXN</span>
+    <span class="hidden md:inline">•</span>
+    <span>📍 CDMX: 16 de Septiembre #11 (Locales 64 y 73)</span>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 1. HEADER / NAVBAR RESPONSIVO                            -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-brand-border transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-4">
+        
+        <!-- Logotipo -->
+        <a href="#inicio" class="flex items-center gap-3 shrink-0 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-red-600/30 group-hover:scale-105 transition-transform">
+            🥋
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-black tracking-tighter text-white leading-none flex items-center gap-1">
+              ASIANA <span class="text-red-500">TUSAH</span>
+              <span class="text-xs text-amber-400 font-extrabold ml-1">MX</span>
+            </span>
+            <span class="text-[9px] font-extrabold tracking-widest text-slate-400 uppercase">Líderes en Artes Marciales &amp; Deporte</span>
+          </div>
+        </a>
+
+        <!-- Menú de Navegación de Escritorio -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-300">
+          <a href="#inicio" class="hover:text-red-500 transition-colors">Inicio</a>
+          <a href="#categorias" class="hover:text-red-500 transition-colors">Categorías</a>
+          <a href="#beneficios" class="hover:text-red-500 transition-colors">Beneficios &amp; Mayoreo</a>
+          <a href="#productos" class="hover:text-red-500 transition-colors">Catálogo</a>
+          <a href="producto.html" class="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-bold bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/20 transition">
+            <span>Guantes Pro Leather</span>
+            <span class="text-[9px] bg-red-600 text-white px-1.5 py-0.2 rounded font-black uppercase">Página Producto</span>
+          </a>
+          <a href="#qa" class="hover:text-red-500 transition-colors">Q&amp;A</a>
+          <a href="#contacto" class="hover:text-red-500 transition-colors">Contacto</a>
+        </nav>
+
+        <!-- Buscador integrado -->
+        <div class="hidden md:flex flex-1 max-w-xs relative items-center">
+          <input type="text" placeholder="Buscar box, fútbol, natación, yoga..." class="w-full pl-9 pr-4 py-2 bg-brand-surface border border-brand-border rounded-full text-xs text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all">
+          <svg class="w-4 h-4 text-slate-400 absolute left-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+
+        <!-- Acciones del Header -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          
+          <!-- Botón Cotizar Mayoreo en Navbar -->
+          <a href="#mayoreo-info" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-black text-white bg-amber-600 hover:bg-amber-500 rounded-xl shadow-md transition-all active:scale-95">
+            <span>Cotizar Mayoreo</span>
+          </a>
+
+          <!-- Botón WhatsApp -->
+          <a href="https://wa.me/5215620304320?text=Hola,%20quisiera%20cotizar%20art%C3%ADculos%20deportivos%20y%20mayoreo" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl shadow-md transition-all active:scale-95">
+            <span>WhatsApp</span>
+          </a>
+
+          <!-- Botón Menú Móvil -->
+          <button id="mobile-toggle" type="button" aria-label="Menú móvil" class="p-2 text-slate-300 hover:bg-brand-surface rounded-lg lg:hidden focus:outline-none focus:ring-2 focus:ring-red-500">
+            <svg id="icon-open" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-brand-border bg-brand-dark px-4 pt-3 pb-6 space-y-3">
+      <div class="relative items-center mb-3">
+        <input type="text" placeholder="Buscar en el catálogo..." class="w-full pl-9 pr-4 py-2.5 bg-brand-surface border border-brand-border rounded-lg text-xs text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-red-500">
+        <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </div>
+
+      <a href="#inicio" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-slate-200 hover:bg-brand-surface hover:text-red-500 transition">Inicio</a>
+      <a href="#categorias" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-slate-200 hover:bg-brand-surface hover:text-red-500 transition">Categorías de Productos</a>
+      <a href="#beneficios" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-slate-200 hover:bg-brand-surface hover:text-red-500 transition">Beneficios, MSI &amp; Mayoreo</a>
+      <a href="#productos" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-slate-200 hover:bg-brand-surface hover:text-red-500 transition">Catálogo de Artículos</a>
+      <a href="producto.html" class="mobile-nav-link flex items-center justify-between px-3 py-2 rounded-lg text-sm font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20">
+        <span>Ficha de Producto: Guantes Pro</span>
+        <span class="text-[10px] bg-red-600 text-white px-2 py-0.5 rounded">DEMO PDP</span>
+      </a>
+      <a href="#qa" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-slate-200 hover:bg-brand-surface hover:text-red-500 transition">Preguntas Frecuentes (Q&amp;A)</a>
+      <a href="#contacto" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-semibold text-slate-200 hover:bg-brand-surface hover:text-red-500 transition">Horarios &amp; Tienda Física</a>
+      
+      <div class="pt-3 border-t border-brand-border flex flex-col gap-2">
+        <a href="#mayoreo-info" class="w-full text-center py-2.5 text-xs font-black text-white bg-amber-600 rounded-lg hover:bg-amber-500 transition shadow">
+          Cotizar Mayoreo Mixto (5+ piezas)
+        </a>
+        <a href="https://maps.app.goo.gl/zX3SFAjF4c9jypPaA" target="_blank" class="w-full text-center py-2.5 text-xs font-bold text-white bg-brand-surface border border-brand-border rounded-lg hover:bg-slate-800 transition">
+          📍 Ver Ubicación en Google Maps
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================= -->
+    <!-- 1. SECCIÓN PRINCIPAL (HERO SECTION)                       -->
+    <!-- ========================================================= -->
+    <section id="inicio" class="relative overflow-hidden bg-brand-dark py-16 sm:py-24 lg:py-32">
+      <!-- Decoración de fondo -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-900/35 via-brand-dark/90 to-brand-dark pointer-events-none"></div>
+      <div class="absolute top-1/4 -right-24 w-[480px] h-[480px] bg-red-600/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-[480px] h-[480px] bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Contenido textual del Hero -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            <!-- Badge superior -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950/80 border border-red-800/80 text-red-400 text-xs font-extrabold uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+              <span>Tienda de Artículos Deportivos &amp; Fabricación Propia</span>
+            </div>
+
+            <!-- TÍTULO EXACTO SOLICITADO -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.12] text-white">
+              Todo para tu entrenamiento y pasión deportiva
+              <span class="bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 bg-clip-text text-transparent">
+                en un solo lugar.
+              </span>
+            </h1>
+
+            <!-- SUBTÍTULO EXACTO SOLICITADO -->
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+              Desde artes marciales y deportes de contacto hasta fútbol, natación, yoga y fitness en casa. Equipamiento de máxima calidad y fabricación propia.
+            </p>
+
+            <!-- LLAMADOS A LA ACCIÓN (CTA) SOLICITADOS -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+              <!-- Botón Principal: Ver Catálogo -->
+              <a href="#productos" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-black text-white bg-red-600 rounded-xl hover:bg-red-500 active:scale-95 shadow-lg shadow-red-600/30 transition-all gap-2">
+                <span>Ver Catálogo</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+              
+              <!-- Botón Secundario: Cotizar Mayoreo -->
+              <a href="#mayoreo-info" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-black text-white bg-amber-600 hover:bg-amber-500 rounded-xl active:scale-95 shadow-lg shadow-amber-600/25 transition-all gap-2">
+                <span>Cotizar Mayoreo</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Destacados rápidos de conversión -->
+            <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-brand-border text-left">
+              <div>
+                <p class="text-xs text-slate-400 font-bold uppercase">Fabricación</p>
+                <p class="text-sm font-black text-white">Marca Propia</p>
+                <p class="text-[11px] text-red-400 font-medium">Personalizados</p>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-bold uppercase">Mayoreo Mixto</p>
+                <p class="text-sm font-black text-amber-400">Desde 5 Piezas</p>
+                <p class="text-[11px] text-slate-400">+ Regalos o desc.</p>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-bold uppercase">Financiamiento</p>
+                <p class="text-sm font-black text-white">Hasta 3 MSI</p>
+                <p class="text-[11px] text-slate-400">Desde $10,000</p>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-bold uppercase">Entrega Rápida</p>
+                <p class="text-sm font-black text-emerald-400">Servicio Pick Up</p>
+                <p class="text-[11px] text-slate-400">Listo en 24 hrs</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Muestra Gráfica del Hero -->
+          <div class="lg:col-span-5 relative flex justify-center">
+            <div class="relative w-full max-w-md bg-gradient-to-b from-brand-surface to-brand-dark border border-brand-border rounded-3xl p-6 shadow-2xl">
+              <span class="absolute top-5 right-5 px-3 py-1 rounded-full text-[10px] font-black bg-red-600 text-white uppercase tracking-wider shadow">
+                FABRICACIÓN PROPIA
+              </span>
+
+              <!-- Mosaico visual de disciplinas -->
+              <div class="h-64 bg-slate-950/90 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden border border-brand-border group">
+                <div class="absolute inset-0 bg-gradient-to-tr from-red-600/20 via-transparent to-amber-500/10"></div>
+                
+                <!-- Iconos de disciplinas en composición deportiva -->
+                <div class="flex items-center justify-center gap-3 text-5xl mb-3 group-hover:scale-110 transition-transform duration-500">
+                  <span>🥊</span>
+                  <span>⚽</span>
+                  <span>🏊</span>
+                  <span>🧘</span>
+                </div>
+                <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Multidisciplinario &amp; Combate</span>
+                <span class="text-[11px] text-slate-400 mt-1">Calidad Profesional Garantizada</span>
+              </div>
+
+              <div class="mt-5 space-y-3">
+                <div class="flex justify-between items-center text-xs">
+                  <span class="font-bold text-red-400 uppercase tracking-wider">Tienda Física &amp; Taller</span>
+                  <span class="text-emerald-400 font-bold">Pick Up Disponible ⚡</span>
+                </div>
+                <h3 class="text-xl font-black text-white">Mx Pro Fighter CDMX</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Visítanos en <strong>16 de Septiembre #11, locales 64 y 73</strong>, o solicita tu pedido por mayoreo con envíos a toda la República.
+                </p>
+                
+                <div class="flex items-center justify-between pt-2">
+                  <a href="https://maps.app.goo.gl/zX3SFAjF4c9jypPaA" target="_blank" class="text-xs font-bold text-amber-400 hover:underline flex items-center gap-1">
+                    <span>📍 Ver en Google Maps</span>
+                  </a>
+                  <a href="#contacto" class="px-4 py-2 bg-red-600 hover:bg-red-500 text-white text-xs font-black rounded-lg transition shadow">
+                    Consultar Horarios
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 2. CATEGORÍAS DE PRODUCTOS (GRID VISUAL)                  -->
+    <!-- ========================================================= -->
+    <section id="categorias" class="py-20 bg-brand-surface border-y border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs font-bold text-red-500 uppercase tracking-widest">Catálogo Especializado</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight mt-1">
+              Categorías de Productos
+            </h2>
+          </div>
+          <p class="text-slate-400 text-sm max-w-md mt-3 md:mt-0">
+            Descubre nuestro catálogo multideportivo con opciones de menudeo, mayoreo y personalización directa de fábrica.
+          </p>
+        </div>
+
+        <!-- Grid de 4 Grandes Categorías -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- CATEGORÍA 1: Artes Marciales y Combate -->
+          <div class="bg-brand-dark rounded-3xl border border-brand-border p-6 flex flex-col justify-between hover:border-red-500 transition-all duration-300 shadow-xl group">
+            <div class="space-y-4">
+              <div class="w-14 h-14 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                🥊
+              </div>
+              <div>
+                <span class="text-[11px] font-black text-red-400 uppercase tracking-wider">Especialidad Principal</span>
+                <h3 class="text-xl font-black text-white mt-1">Artes Marciales &amp; Combate</h3>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Equipamiento integral para <strong>Box, Karate, Taekwondo, MMA, Muay Thai y Judo</strong>.
+              </p>
+              
+              <!-- Subítems de categoría -->
+              <div class="pt-2 border-t border-brand-border/60 space-y-1.5 text-xs text-slate-400">
+                <div class="flex items-center gap-2">
+                  <span class="text-red-500">✓</span> <span><strong>Accesorios:</strong> Vendas, bucales, peras y manoplas.</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-red-500">✓</span> <span><strong>Protecciones:</strong> Caretas, espinilleras y petos.</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-red-500">✓</span> <span><strong>Vestimenta:</strong> Doboks, kimonos, batas y shorts thai.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <a href="#productos" class="w-full py-2.5 px-4 bg-brand-surface hover:bg-red-600 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5">
+                <span>Ver Equipo de Combate</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- CATEGORÍA 2: Deportes y Fitness -->
+          <div class="bg-brand-dark rounded-3xl border border-brand-border p-6 flex flex-col justify-between hover:border-amber-500 transition-all duration-300 shadow-xl group">
+            <div class="space-y-4">
+              <div class="w-14 h-14 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                ⚽
+              </div>
+              <div>
+                <span class="text-[11px] font-black text-amber-400 uppercase tracking-wider">Multideporte</span>
+                <h3 class="text-xl font-black text-white mt-1">Deportes &amp; Fitness</h3>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Rendimiento y disciplina en cancha, alberca, estudio o en la comodidad de tu hogar.
+              </p>
+              
+              <div class="pt-2 border-t border-brand-border/60 space-y-1.5 text-xs text-slate-400">
+                <div class="flex items-center gap-2">
+                  <span class="text-amber-500">✓</span> <span><strong>Fútbol:</strong> Balones, playeras de equipos y uniformes.</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-amber-500">✓</span> <span><strong>Natación:</strong> Goggles, gorras de silicón y aletas.</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-amber-500">✓</span> <span><strong>Yoga:</strong> Tapetes mats antiderrapantes y bloques.</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-amber-500">✓</span> <span><strong>Gimnasio &amp; Casa:</strong> Mancuernas y ligas de poder.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <a href="#productos" class="w-full py-2.5 px-4 bg-brand-surface hover:bg-amber-600 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5">
+                <span>Ver Deportes &amp; Fitness</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- CATEGORÍA 3: Salud y Soporte -->
+          <div class="bg-brand-dark rounded-3xl border border-brand-border p-6 flex flex-col justify-between hover:border-blue-500 transition-all duration-300 shadow-xl group">
+            <div class="space-y-4">
+              <div class="w-14 h-14 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                🩹
+              </div>
+              <div>
+                <span class="text-[11px] font-black text-blue-400 uppercase tracking-wider">Cuidado &amp; Prevención</span>
+                <h3 class="text-xl font-black text-white mt-1">Salud &amp; Soporte</h3>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Protección articular de grado ortopédico y compresión elástica para prevenir y rehabilitar lesiones.
+              </p>
+              
+              <div class="pt-2 border-t border-brand-border/60 space-y-1.5 text-xs text-slate-400">
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-400">✓</span> <span><strong>Soportes Elásticos:</strong> Rodilleras, tobilleras y coderas.</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-400">✓</span> <span><strong>Línea Ortopédica:</strong> Fajas lumbares de trabajo y deporte.</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-400">✓</span> <span><strong>Soporte Articular:</strong> Muñequeras rígidas y cintas kinesiológicas.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <a href="#productos" class="w-full py-2.5 px-4 bg-brand-surface hover:bg-blue-600 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5">
+                <span>Ver Soportes Ortopédicos</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- CATEGORÍA 4: Fabricación Propia (Destacado Especial) -->
+          <div class="bg-gradient-to-b from-red-950/60 to-brand-dark rounded-3xl border-2 border-red-600/80 p-6 flex flex-col justify-between hover:border-red-500 transition-all duration-300 shadow-xl group relative overflow-hidden">
+            <span class="absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[9px] font-black bg-red-600 text-white uppercase tracking-wider">
+              TALLER PROPIO
+            </span>
+
+            <div class="space-y-4">
+              <div class="w-14 h-14 rounded-2xl bg-red-600 text-white flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-lg shadow-red-600/40">
+                ⚙️
+              </div>
+              <div>
+                <span class="text-[11px] font-black text-amber-400 uppercase tracking-wider">De Fábrica a tus Manos</span>
+                <h3 class="text-xl font-black text-white mt-1">Fabricación Propia</h3>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed font-medium">
+                Fabricamos artículos <strong>personalizados o de marca propia</strong> para atletas, academias, gimnasios y equipos deportivos.
+              </p>
+              
+              <div class="pt-2 border-t border-red-900/60 space-y-1.5 text-xs text-slate-300">
+                <div class="flex items-center gap-2">
+                  <span class="text-amber-400 font-bold">★</span> <span>Uniformes deportivos y playeras bordadas o sublimadas.</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-amber-400 font-bold">★</span> <span>Guantes, costales y caretas con el logo de tu gimnasio.</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-amber-400 font-bold">★</span> <span>Precios directos de fábrica sin intermediarios.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <a href="#mayoreo-info" class="w-full py-2.5 px-4 bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs font-black transition flex items-center justify-center gap-1.5 shadow-md">
+                <span>Cotizar Personalización</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 3. SECCIÓN DE BENEFICIOS Y PROMOCIONES (CARDS CON ICONOS) -->
+    <!-- ========================================================= -->
+    <section id="beneficios" class="py-20 bg-brand-dark relative overflow-hidden">
+      <!-- Glow ambiental -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[350px] bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-amber-500/10 border border-amber-500/30 text-amber-400 mb-3">
+            Ventajas Exclusivas Mx Pro Fighter
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            Beneficios y Promociones Diseñados Para Ti
+          </h2>
+          <p class="text-slate-400 text-base mt-3">
+            Comodidad en tus pagos, descuentos reales por volumen y la confianza de comprar directo en tienda física o en línea.
+          </p>
+        </div>
+
+        <!-- Grid de las 4 Promociones Requeridas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="mayoreo-info">
+          
+          <!-- TARJETA 1: Meses Sin Intereses -->
+          <div class="bg-brand-surface rounded-3xl border border-brand-border p-7 flex flex-col justify-between hover:border-amber-500/60 transition-all duration-300 shadow-xl group">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl font-black group-hover:scale-110 transition-transform">
+                💳
+              </div>
+              <h3 class="text-lg font-black text-white">Meses Sin Intereses</h3>
+              <p class="text-sm font-bold text-amber-400">Hasta 3 MSI</p>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Aprovecha <strong>hasta 3 Meses Sin Intereses</strong> en compras mínimas de <strong>$10,000 MXN</strong> con tarjetas de crédito participantes. Ideal para equipar tu gimnasio o renovar material.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-brand-border mt-4">
+              <span class="text-[11px] font-semibold text-slate-400 flex items-center gap-1.5">
+                <span class="text-emerald-400">●</span> Aplica en tienda y línea
+              </span>
+            </div>
+          </div>
+
+          <!-- TARJETA 2: Métodos de Pago -->
+          <div class="bg-brand-surface rounded-3xl border border-brand-border p-7 flex flex-col justify-between hover:border-emerald-500/60 transition-all duration-300 shadow-xl group">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl font-black group-hover:scale-110 transition-transform">
+                💵
+              </div>
+              <h3 class="text-lg font-black text-white">Métodos de Pago</h3>
+              <p class="text-sm font-bold text-emerald-400">Total Flexibilidad</p>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Aceptamos <strong>todos los métodos de pago</strong>: tarjetas de débito y crédito (Visa, Mastercard, AMEX), pago en efectivo en sucursal y transferencias electrónicas interbancarias directas (SPEI).
+              </p>
+            </div>
+            <div class="pt-6 border-t border-brand-border mt-4">
+              <span class="text-[11px] font-semibold text-slate-400 flex items-center gap-1.5">
+                <span class="text-emerald-400">●</span> Pagos 100% seguros
+              </span>
+            </div>
+          </div>
+
+          <!-- TARJETA 3: Mayoreo Mixto -->
+          <div class="bg-gradient-to-b from-red-950/40 to-brand-surface rounded-3xl border-2 border-red-600/70 p-7 flex flex-col justify-between hover:border-red-500 transition-all duration-300 shadow-2xl group relative">
+            <span class="absolute top-4 right-4 px-2 py-0.5 rounded-full text-[9px] font-black bg-red-600 text-white uppercase">
+              TOP BENEFICIO
+            </span>
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-red-600/30 text-red-400 flex items-center justify-center text-2xl font-black group-hover:scale-110 transition-transform">
+                📦
+              </div>
+              <h3 class="text-lg font-black text-white">Mayoreo Mixto</h3>
+              <p class="text-sm font-bold text-red-400">Desde 5 Piezas Combinadas</p>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                ¡No necesitas comprar docenas de lo mismo! Combina desde <strong>5 piezas surtidas</strong>. Pagando en <strong>efectivo o transferencia</strong>, obtén desde un <strong>5% de descuento o más artículos de regalo</strong>.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-red-900/60 mt-4">
+              <a href="https://wa.me/5215620304320?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20un%20pedido%20de%20Mayoreo%20Mixto%20(5+%20piezas)" target="_blank" class="text-xs font-black text-amber-400 hover:text-amber-300 flex items-center justify-between">
+                <span>Cotizar Mayoreo por WhatsApp</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- TARJETA 4: Servicio Pick Up -->
+          <div class="bg-brand-surface rounded-3xl border border-brand-border p-7 flex flex-col justify-between hover:border-blue-500/60 transition-all duration-300 shadow-xl group">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-2xl font-black group-hover:scale-110 transition-transform">
+                🛍️
+              </div>
+              <h3 class="text-lg font-black text-white">Servicio Pick Up</h3>
+              <p class="text-sm font-bold text-blue-400">Listo Desde un Día Antes</p>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Haz tu pedido con anticipación y <strong>recógelo listo desde un día antes</strong> en nuestra tienda de <strong>16 de Septiembre 11 (locales 64 y 73)</strong> sin filas y con tu material verificado.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-brand-border mt-4">
+              <span class="text-[11px] font-semibold text-slate-400 flex items-center gap-1.5">
+                <span class="text-emerald-400">●</span> Ahorra tiempo en CDMX
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 4. CATÁLOGO DE PRODUCTOS (CARDS DETALLADAS)                -->
+    <!-- ========================================================= -->
+    <section id="productos" class="py-20 bg-brand-surface border-t border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+          <div>
+            <span class="text-xs font-bold text-red-500 uppercase tracking-widest">Lo Más Buscado en Tienda</span>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight mt-1">
+              Catálogo de Artículos Destacados
+            </h2>
+          </div>
+
+          <!-- Botón hacia la ficha del producto PDP -->
+          <a href="producto.html" class="inline-flex items-center gap-2 px-4 py-2.5 bg-red-600/20 border border-red-500/40 text-red-400 hover:bg-red-600 hover:text-white rounded-xl text-xs font-bold transition">
+            <span>Ver Ficha Completa de Guantes Pro Leather (PDP)</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- Grid de 8 Cards de Producto Reales de Asiana / Tusah -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- PRODUCTO 1: Karategui Tusah Clásico 7.5 oz - WKF Approved -->
+          <article class="bg-brand-dark rounded-2xl border border-brand-border shadow-lg hover:border-red-500 transition-all duration-300 flex flex-col group overflow-hidden">
+            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-brand-border">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-red-600 text-white shadow">
+                WKF Approved
+              </span>
+              <div class="text-6xl group-hover:scale-110 transition-transform duration-300">
+                🥋
+              </div>
+              <div class="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="producto.html" class="block text-center w-full py-2 bg-red-600 text-white text-xs font-bold rounded-lg hover:bg-red-500 transition">
+                  Ver Ficha Oficial (PDP)
+                </a>
+              </div>
+            </div>
+
+            <div class="p-5 flex flex-col flex-grow justify-between space-y-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-red-500 font-bold uppercase text-[10px]">TUSAH • KARATE</span>
+                  <span class="text-slate-400 text-[10px]">SKU: 5222-224</span>
+                </div>
+                <h3 class="font-bold text-white group-hover:text-red-400 transition-colors line-clamp-1">
+                  <a href="producto.html">Karategui Tusah Clásico 7.5 oz</a>
+                </h3>
+                <p class="text-xs text-slate-400 line-clamp-2">
+                  Aprobado por la WKF para competencia oficial. Tejido ligero, transpirable y de máxima movilidad.
+                </p>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-400">
+                <span>Tallas: 000 (130cm) a 7 (200cm)</span>
+              </div>
+              <div class="pt-3 border-t border-brand-border flex items-center justify-between">
+                <div>
+                  <span class="text-lg font-black text-white">$600 MXN</span>
+                  <span class="text-[10px] text-amber-400 block font-semibold">Mayoreo desde 5 piezas</span>
+                </div>
+                <a href="producto.html" class="p-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white transition">
+                  +
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 2: Dobok Tusah Clásico (WT) -->
+          <article class="bg-brand-dark rounded-2xl border border-brand-border shadow-lg hover:border-amber-500 transition-all duration-300 flex flex-col group overflow-hidden">
+            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-brand-border">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-amber-500 text-slate-950 shadow">
+                WT Approved
+              </span>
+              <div class="text-6xl group-hover:scale-110 transition-transform duration-300">
+                🥋
+              </div>
+              <div class="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <button onclick="abrirModalProducto('Dobok Tusah Clásico WT (Cuello Blanco/Negro)', '$699 MXN', 'Taekwondo WT')" class="w-full py-2 bg-brand-surface border border-brand-border text-white text-xs font-bold rounded-lg hover:bg-amber-600 transition">
+                  Vista Rápida
+                </button>
+              </div>
+            </div>
+
+            <div class="p-5 flex flex-col flex-grow justify-between space-y-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-amber-400 font-bold uppercase text-[10px]">TUSAH • TAEKWONDO</span>
+                  <span class="text-slate-400 text-[10px]">WT Homologado</span>
+                </div>
+                <h3 class="font-bold text-white group-hover:text-amber-400 transition-colors line-clamp-1">
+                  Dobok Tusah Clásico Oficial (WT)
+                </h3>
+                <p class="text-xs text-slate-400 line-clamp-2">
+                  Uniforme oficial homologado por World Taekwondo. Cuello blanco o cuello negro con pantalón elástico.
+                </p>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-400">
+                <span>Tallas: 000 a 7 (Infantil y Adulto)</span>
+              </div>
+              <div class="pt-3 border-t border-brand-border flex items-center justify-between">
+                <div>
+                  <span class="text-lg font-black text-white">$699 MXN</span>
+                  <span class="text-[10px] text-amber-400 block font-semibold">Mayoreo Mixto 5+ piezas</span>
+                </div>
+                <button onclick="abrirModalProducto('Dobok Tusah Clásico WT (Cuello Blanco/Negro)', '$699 MXN', 'Taekwondo WT')" class="p-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white transition">
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 3: Judogui Asiana 5 Star Azul -->
+          <article class="bg-brand-dark rounded-2xl border border-brand-border shadow-lg hover:border-blue-500 transition-all duration-300 flex flex-col group overflow-hidden">
+            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-brand-border">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-blue-600 text-white shadow">
+                Grano de Arroz
+              </span>
+              <div class="text-6xl group-hover:scale-110 transition-transform duration-300">
+                🥋
+              </div>
+              <div class="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <button onclick="abrirModalProducto('Judogui Asiana 5 Star Azul (Tejido Pesado)', '$2,599 MXN', 'Judo & BJJ')" class="w-full py-2 bg-brand-surface border border-brand-border text-white text-xs font-bold rounded-lg hover:bg-blue-600 transition">
+                  Vista Rápida
+                </button>
+              </div>
+            </div>
+
+            <div class="p-5 flex flex-col flex-grow justify-between space-y-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-blue-400 font-bold uppercase text-[10px]">ASIANA • JUDO</span>
+                  <span class="text-slate-400 text-[10px]">SKU: 143</span>
+                </div>
+                <h3 class="font-bold text-white group-hover:text-blue-400 transition-colors line-clamp-1">
+                  Judogui Asiana 5 Star Azul
+                </h3>
+                <p class="text-xs text-slate-400 line-clamp-2">
+                  100% algodón de alto gramaje con tejido grano de arroz reforzado en pecho, hombros y rodillas.
+                </p>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-400">
+                <span>Tallas: 3, 4, 5, 6 (Pesado Pro)</span>
+              </div>
+              <div class="pt-3 border-t border-brand-border flex items-center justify-between">
+                <div>
+                  <span class="text-lg font-black text-white">$2,599 MXN</span>
+                  <span class="text-[10px] text-amber-400 block font-semibold">3 MSI Disponibles</span>
+                </div>
+                <button onclick="abrirModalProducto('Judogui Asiana 5 Star Azul (Tejido Pesado)', '$2,599 MXN', 'Judo & BJJ')" class="p-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white transition">
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 4: Guantes Asiana Box / MMA Pro Piel -->
+          <article class="bg-brand-dark rounded-2xl border border-brand-border shadow-lg hover:border-red-500 transition-all duration-300 flex flex-col group overflow-hidden">
+            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-brand-border">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-red-600 text-white shadow">
+                100% Piel
+              </span>
+              <div class="text-6xl group-hover:scale-110 transition-transform duration-300">
+                🥊
+              </div>
+              <div class="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <button onclick="abrirModalProducto('Guantes Asiana Box / Kickboxing / MMA 100% Piel', '$1,199 MXN', 'Boxeo & MMA')" class="w-full py-2 bg-brand-surface border border-brand-border text-white text-xs font-bold rounded-lg hover:bg-red-600 transition">
+                  Vista Rápida
+                </button>
+              </div>
+            </div>
+
+            <div class="p-5 flex flex-col flex-grow justify-between space-y-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-red-500 font-bold uppercase text-[10px]">ASIANA • BOX &amp; MMA</span>
+                  <span class="text-slate-400 text-[10px]">Fabricación Propia</span>
+                </div>
+                <h3 class="font-bold text-white group-hover:text-red-400 transition-colors line-clamp-1">
+                  Guantes Asiana Pro Leather Piel
+                </h3>
+                <p class="text-xs text-slate-400 line-clamp-2">
+                  Cuero genuino vacuno, molde anatómico antilesiones y cierre de velcro ancho para sparring seguro.
+                </p>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-400">
+                <span>Onzas: 12oz, 14oz, 16oz</span>
+              </div>
+              <div class="pt-3 border-t border-brand-border flex items-center justify-between">
+                <div>
+                  <span class="text-lg font-black text-white">$1,199 MXN</span>
+                  <span class="text-[10px] text-amber-400 block font-semibold">Descuento en 5+ piezas</span>
+                </div>
+                <button onclick="abrirModalProducto('Guantes Asiana Box / Kickboxing / MMA 100% Piel', '$1,199 MXN', 'Boxeo & MMA')" class="p-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white transition">
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 5: Pao Tusah Master Curvo -->
+          <article class="bg-brand-dark rounded-2xl border border-brand-border shadow-lg hover:border-amber-500 transition-all duration-300 flex flex-col group overflow-hidden">
+            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-brand-border">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-amber-500 text-slate-950 shadow">
+                Entrenamiento Pro
+              </span>
+              <div class="text-6xl group-hover:scale-110 transition-transform duration-300">
+                🎯
+              </div>
+              <div class="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <button onclick="abrirModalProducto('Pao Tusah Master Curvo Vino / Negro', '$499 MXN', 'Entrenamiento')" class="w-full py-2 bg-brand-surface border border-brand-border text-white text-xs font-bold rounded-lg hover:bg-amber-600 transition">
+                  Vista Rápida
+                </button>
+              </div>
+            </div>
+
+            <div class="p-5 flex flex-col flex-grow justify-between space-y-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-amber-400 font-bold uppercase text-[10px]">TUSAH • COACHING</span>
+                  <span class="text-slate-400 text-[10px]">SKU: 1330-3</span>
+                </div>
+                <h3 class="font-bold text-white group-hover:text-amber-400 transition-colors line-clamp-1">
+                  Pao Tusah Master Curvo Vino
+                </h3>
+                <p class="text-xs text-slate-400 line-clamp-2">
+                  Diseño ergonómico curvo para absorber patadas potentes de Taekwondo, Muay Thai y Kickboxing.
+                </p>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-400">
+                <span>Relleno de alta densidad antimpacto</span>
+              </div>
+              <div class="pt-3 border-t border-brand-border flex items-center justify-between">
+                <div>
+                  <span class="text-lg font-black text-white">$499 MXN</span>
+                  <span class="text-[10px] text-slate-400 block font-medium">Por pieza individual</span>
+                </div>
+                <button onclick="abrirModalProducto('Pao Tusah Master Curvo Vino / Negro', '$499 MXN', 'Entrenamiento')" class="p-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white transition">
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 6: Nudillera Tusah Sin Dedo WKF -->
+          <article class="bg-brand-dark rounded-2xl border border-brand-border shadow-lg hover:border-blue-500 transition-all duration-300 flex flex-col group overflow-hidden">
+            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-brand-border">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-blue-600 text-white shadow">
+                WKF Kumite
+              </span>
+              <div class="text-6xl group-hover:scale-110 transition-transform duration-300">
+                🥊
+              </div>
+              <div class="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <button onclick="abrirModalProducto('Nudillera Tusah Sin Dedo WKF Approved (Azul/Rojo)', '$449 MXN', 'Protección Karate')" class="w-full py-2 bg-brand-surface border border-brand-border text-white text-xs font-bold rounded-lg hover:bg-blue-600 transition">
+                  Vista Rápida
+                </button>
+              </div>
+            </div>
+
+            <div class="p-5 flex flex-col flex-grow justify-between space-y-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-blue-400 font-bold uppercase text-[10px]">TUSAH • PROTECCIÓN</span>
+                  <span class="text-slate-400 text-[10px]">SKU: 265-1-1</span>
+                </div>
+                <h3 class="font-bold text-white group-hover:text-blue-400 transition-colors line-clamp-1">
+                  Nudillera Tusah Sin Dedo WKF
+                </h3>
+                <p class="text-xs text-slate-400 line-clamp-2">
+                  Protector oficial de puño para Kumite en Karate. Acolchado moldeado con banda de ajuste elástica.
+                </p>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-400">
+                <span>Colores: Azul y Rojo reglamentarios</span>
+              </div>
+              <div class="pt-3 border-t border-brand-border flex items-center justify-between">
+                <div>
+                  <span class="text-lg font-black text-white">$449 MXN</span>
+                  <span class="text-[10px] text-amber-400 block font-semibold">Par oficial homologado</span>
+                </div>
+                <button onclick="abrirModalProducto('Nudillera Tusah Sin Dedo WKF Approved (Azul/Rojo)', '$449 MXN', 'Protección Karate')" class="p-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white transition">
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 7: Short Asiana para Kick Boxing / Muay Thai -->
+          <article class="bg-brand-dark rounded-2xl border border-brand-border shadow-lg hover:border-red-500 transition-all duration-300 flex flex-col group overflow-hidden">
+            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-brand-border">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-red-600 text-white shadow">
+                Vestimenta Asiana
+              </span>
+              <div class="text-6xl group-hover:scale-110 transition-transform duration-300">
+                🩳
+              </div>
+              <div class="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <button onclick="abrirModalProducto('Short Asiana para Kick Boxing / Muay Thai Rojo c/Blanco', '$499 MXN', 'Vestimenta Combate')" class="w-full py-2 bg-brand-surface border border-brand-border text-white text-xs font-bold rounded-lg hover:bg-red-600 transition">
+                  Vista Rápida
+                </button>
+              </div>
+            </div>
+
+            <div class="p-5 flex flex-col flex-grow justify-between space-y-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-red-500 font-bold uppercase text-[10px]">ASIANA • FIGHTWEAR</span>
+                  <span class="text-slate-400 text-[10px]">SKU: 662-1</span>
+                </div>
+                <h3 class="font-bold text-white group-hover:text-red-400 transition-colors line-clamp-1">
+                  Short Asiana Kick Boxing / Thai
+                </h3>
+                <p class="text-xs text-slate-400 line-clamp-2">
+                  Satín de máxima resistencia con aberturas laterales amplias para pateo libre y resorte elástico ancho.
+                </p>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-400">
+                <span>Tallas: CH, M, G, XG</span>
+              </div>
+              <div class="pt-3 border-t border-brand-border flex items-center justify-between">
+                <div>
+                  <span class="text-lg font-black text-white">$499 MXN</span>
+                  <span class="text-[10px] text-amber-400 block font-semibold">Mayoreo disponible</span>
+                </div>
+                <button onclick="abrirModalProducto('Short Asiana para Kick Boxing / Muay Thai Rojo c/Blanco', '$499 MXN', 'Vestimenta Combate')" class="p-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white transition">
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUCTO 8: Salud & Soporte / Rodillera Ortopédica -->
+          <article class="bg-brand-dark rounded-2xl border border-brand-border shadow-lg hover:border-emerald-500 transition-all duration-300 flex flex-col group overflow-hidden">
+            <div class="relative bg-slate-950 h-56 flex items-center justify-center overflow-hidden border-b border-brand-border">
+              <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-emerald-600 text-white shadow">
+                Salud y Soporte
+              </span>
+              <div class="text-6xl group-hover:scale-110 transition-transform duration-300">
+                🩹
+              </div>
+              <div class="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                <button onclick="abrirModalProducto('Rodillera Articulada Elástica con Soporte Rotuliano', '$290 MXN', 'Salud & Soporte')" class="w-full py-2 bg-brand-surface border border-brand-border text-white text-xs font-bold rounded-lg hover:bg-emerald-600 transition">
+                  Vista Rápida
+                </button>
+              </div>
+            </div>
+
+            <div class="p-5 flex flex-col flex-grow justify-between space-y-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-emerald-400 font-bold uppercase text-[10px]">PREVENCIÓN ARTICULAR</span>
+                  <span class="text-slate-400 text-[10px]">Grado Ortopédico</span>
+                </div>
+                <h3 class="font-bold text-white group-hover:text-emerald-400 transition-colors line-clamp-1">
+                  Rodillera Elástica Ortopédica
+                </h3>
+                <p class="text-xs text-slate-400 line-clamp-2">
+                  Soporte elástico con almohadilla de gel rotuliana y varillas laterales para protección de ligamentos.
+                </p>
+              </div>
+              <div class="flex items-center gap-1.5 text-[11px] text-slate-400">
+                <span>Tallas: CH, M, G, XG</span>
+              </div>
+              <div class="pt-3 border-t border-brand-border flex items-center justify-between">
+                <div>
+                  <span class="text-lg font-black text-white">$290 MXN</span>
+                  <span class="text-[10px] text-slate-400 block font-medium">Calidad ortopédica</span>
+                </div>
+                <button onclick="abrirModalProducto('Rodillera Articulada Elástica con Soporte Rotuliano', '$290 MXN', 'Salud & Soporte')" class="p-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white transition">
+                  +
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 5. PREGUNTAS FRECUENTES (Q&A INTERACTIVO)                 -->
+    <!-- ========================================================= -->
+    <section id="qa" class="py-20 bg-brand-dark border-t border-brand-border">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-14">
+          <span class="text-xs font-bold text-red-500 uppercase tracking-widest bg-red-950/60 border border-red-800/80 px-3 py-1 rounded-full">
+            Resolvemos tus Dudas
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight mt-3">
+            Preguntas Frecuentes (Q&amp;A)
+          </h2>
+          <p class="text-slate-400 text-base mt-2">
+            Todo sobre mayoreo mixto, compras a meses sin intereses, servicio pick up y fabricación propia.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- Q1: Mayoreo Mixto -->
+          <details class="group bg-brand-surface rounded-2xl border border-brand-border p-6 open:border-red-500/60 transition-all duration-200" open>
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-white hover:text-red-400 transition">
+              <span class="text-base sm:text-lg">¿Cómo funciona el Mayoreo Mixto desde 5 piezas?</span>
+              <span class="shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180 text-red-500">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-300 text-sm leading-relaxed border-t border-brand-border pt-4">
+              En <strong>Mx Pro Fighter</strong> no te obligamos a llevar 5 piezas idénticas. Puedes armar tu paquete combinando por ejemplo: 2 pares de guantes, 1 uniforme de fútbol, 1 rodillera ortopédica y 1 mat de yoga. Al pagar en <strong>efectivo o transferencia</strong>, recibes desde un <strong>5% de descuento directo o artículos adicionales de regalo</strong> para tu entrenamiento.
+            </p>
+          </details>
+
+          <!-- Q2: Meses Sin Intereses -->
+          <details class="group bg-brand-surface rounded-2xl border border-brand-border p-6 open:border-red-500/60 transition-all duration-200">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-white hover:text-red-400 transition">
+              <span class="text-base sm:text-lg">¿Cuáles son las condiciones para los Meses Sin Intereses (MSI)?</span>
+              <span class="shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180 text-red-500">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-300 text-sm leading-relaxed border-t border-brand-border pt-4">
+              Ofrecemos <strong>hasta 3 Meses Sin Intereses</strong> en compras mínimas de <strong>$10,000 MXN</strong> con tarjetas de crédito participantes. Esta modalidad es perfecta para entrenadores, academias de artes marciales y gimnasios que buscan equiparse al mejor precio sin descapitalizarse.
+            </p>
+          </details>
+
+          <!-- Q3: Servicio Pick Up -->
+          <details class="group bg-brand-surface rounded-2xl border border-brand-border p-6 open:border-red-500/60 transition-all duration-200">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-white hover:text-red-400 transition">
+              <span class="text-base sm:text-lg">¿Cómo solicito el Servicio Pick Up en tienda física?</span>
+              <span class="shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180 text-red-500">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-300 text-sm leading-relaxed border-t border-brand-border pt-4">
+              Nos envías tu lista de productos por WhatsApp al <strong>+52 1 56 2030 4320</strong> con un día de anticipación. Nuestro equipo prepara, revisa y empaqueta tus artículos para que cuando llegues a <strong>16 de Septiembre #11 (locales 64 y 73)</strong>, tu pedido esté listo para entrega inmediata sin esperas.
+            </p>
+          </details>
+
+          <!-- Q4: Fabricación Propia -->
+          <details class="group bg-brand-surface rounded-2xl border border-brand-border p-6 open:border-red-500/60 transition-all duration-200">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-white hover:text-red-400 transition">
+              <span class="text-base sm:text-lg">¿Qué artículos pueden personalizar con fabricación propia?</span>
+              <span class="shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180 text-red-500">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-300 text-sm leading-relaxed border-t border-brand-border pt-4">
+              Contamos con taller especializado para fabricar <strong>guantes de boxeo con tu marca, batas de combate, uniformes y playeras deportivas sublimadas o bordadas, costales de golpeo con medidas personalizadas y caretas</strong> con la cromática y logotipos de tu gimnasio o academia.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 6. CONTACTO & TIENDA FÍSICA EN CDMX                       -->
+    <!-- ========================================================= -->
+    <section id="contacto" class="py-20 bg-brand-surface border-t border-brand-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Información y Mapa -->
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs font-bold text-red-500 uppercase tracking-widest bg-red-950/60 border border-red-800/80 px-3 py-1 rounded-full">
+              Ubicación Oficial en CDMX
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+              Visítanos en Nuestra Tienda Física
+            </h2>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Ven a conocer la calidad de nuestros materiales en persona, pruébate el calzado o guantes y recoge tus pedidos con nuestro servicio Pick Up.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              
+              <!-- Dirección -->
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-dark border border-brand-border">
+                <div class="w-10 h-10 rounded-lg bg-red-600/20 text-red-500 flex items-center justify-center shrink-0 font-black text-lg">
+                  📍
+                </div>
+                <div class="space-y-1">
+                  <h4 class="text-xs font-bold uppercase text-slate-400">Dirección de la Tienda</h4>
+                  <p class="text-sm font-bold text-white">Calle 16 de Septiembre #11, Locales 64 y 73 (junto al elevador)</p>
+                  <p class="text-xs text-slate-400">Col. Centro Histórico, Cuauhtémoc, 06000 Ciudad de México, CDMX</p>
+                  <a href="https://maps.app.goo.gl/zX3SFAjF4c9jypPaA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-red-400 hover:text-red-300 underline mt-1">
+                    <span>Abrir en Google Maps Oficial →</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Teléfono y WhatsApp -->
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-dark border border-brand-border">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 font-black text-lg">
+                  📞
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold uppercase text-slate-400">WhatsApp &amp; Pedidos Rápidos</h4>
+                  <a href="https://wa.me/5215620304320" target="_blank" class="text-base font-black text-emerald-400 hover:underline block">
+                    +52 1 56 2030 4320
+                  </a>
+                  <p class="text-xs text-slate-400">Respuesta ágil para cotizaciones de mayoreo y pedidos Pick Up.</p>
+                </div>
+              </div>
+
+              <!-- Horarios Resumidos en tarjeta de contacto -->
+              <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-dark border border-brand-border">
+                <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 font-black text-lg">
+                  ⏰
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold uppercase text-slate-400">Horarios de Atención</h4>
+                  <p class="text-xs text-white"><strong>Lunes a Viernes:</strong> 10:00 AM - 7:00 PM</p>
+                  <p class="text-xs text-white"><strong>Sábados:</strong> 10:00 AM - 8:00 PM</p>
+                  <p class="text-xs text-amber-400 font-bold"><strong>Domingos:</strong> 11:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Mapa embebido -->
+            <div class="rounded-2xl overflow-hidden border border-brand-border shadow-xl h-52 relative">
+              <iframe 
+                title="Mapa de Tienda Mx Pro Fighter" 
+                class="w-full h-full border-0" 
+                src="https://maps.google.com/maps?q=19.4322463,-99.1401117&z=17&output=embed" 
+                loading="lazy">
+              </iframe>
+              <div class="absolute bottom-2 left-2 bg-slate-950/90 px-3 py-1 rounded text-[11px] font-bold text-white border border-slate-700">
+                📍 16 de Septiembre 11 (Locales 64 y 73)
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Formulario de Contacto / Cotización de Mayoreo -->
+          <div class="lg:col-span-7 bg-brand-dark p-6 sm:p-10 rounded-3xl border border-brand-border shadow-2xl">
+            <h3 class="text-2xl font-black text-white mb-2">Solicita tu Cotización o Pedido</h3>
+            <p class="text-xs text-slate-400 mb-6">Completa el formulario para compras a menudeo, mayoreo mixto (desde 5 piezas) o fabricación personalizada.</p>
+            
+            <form onsubmit="enviarAWhatsApp(event)" class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="nombre" class="block text-xs font-bold uppercase text-slate-300 mb-2">Nombre Completo *</label>
+                  <input type="text" id="nombre" required placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-brand-border text-white focus:outline-none focus:ring-2 focus:ring-red-500 text-sm">
+                </div>
+                <div>
+                  <label for="telefono" class="block text-xs font-bold uppercase text-slate-300 mb-2">WhatsApp o Teléfono *</label>
+                  <input type="tel" id="telefono" required placeholder="55 1234 5678" class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-brand-border text-white focus:outline-none focus:ring-2 focus:ring-red-500 text-sm">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="categoria" class="block text-xs font-bold uppercase text-slate-300 mb-2">Categoría de Interés</label>
+                  <select id="categoria" class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-brand-border text-white focus:outline-none focus:ring-2 focus:ring-red-500 text-sm">
+                    <option value="Artes Marciales & Combate (Box, MMA, Muay Thai, Karate, TKD, Judo)">Artes Marciales &amp; Combate (Box, MMA, Muay Thai)</option>
+                    <option value="Deportes & Fitness (Fútbol, Natación, Yoga, Gym en casa)">Deportes &amp; Fitness (Fútbol, Natación, Yoga)</option>
+                    <option value="Salud & Soporte (Rodilleras, Ortopedia, Compresión)">Salud &amp; Soporte (Rodilleras, Ortopedia)</option>
+                    <option value="Fabricación Propia / Marca Personalizada con Logotipo">Fabricación Propia / Marca Personalizada</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="tipo_compra" class="block text-xs font-bold uppercase text-slate-300 mb-2">Tipo de Compra</label>
+                  <select id="tipo_compra" class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-brand-border text-white focus:outline-none focus:ring-2 focus:ring-red-500 text-sm">
+                    <option value="Mayoreo Mixto (5 piezas o más con descuento/regalo)">Mayoreo Mixto (5 piezas o más)</option>
+                    <option value="Menudeo / Compra Individual">Menudeo / Compra Individual</option>
+                    <option value="Servicio Pick Up en Tienda (16 de Septiembre 11)">Servicio Pick Up en Tienda</option>
+                    <option value="Cotización a 3 MSI (Mayor a $10,000 MXN)">Cotización con 3 MSI (Mayor a $10,000 MXN)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="mensaje" class="block text-xs font-bold uppercase text-slate-300 mb-2">Detalles de tu pedido o dudas *</label>
+                <textarea id="mensaje" required rows="4" placeholder="Indícanos los artículos, tallas, cantidades o si requieres servicio de fabricación personalizada con tu logo..." class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-brand-border text-white focus:outline-none focus:ring-2 focus:ring-red-500 text-sm"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm shadow-lg shadow-emerald-600/30 transition-all active:scale-[0.99] flex items-center justify-center gap-2">
+                <span>Enviar Solicitud por WhatsApp (+52 1 56 2030 4320)</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- 4. PIE DE PÁGINA (FOOTER) CON HORARIOS DE ATENCIÓN         -->
+  <!-- ========================================================= -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Fila Principal del Footer -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-brand-border">
+        
+        <!-- Columna 1: Marca y Ubicación -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2.5">
+            <div class="w-9 h-9 rounded-xl bg-red-600 flex items-center justify-center text-white font-black text-xl shadow-md shadow-red-600/30">
+              ⚡
+            </div>
+            <span class="text-xl font-black text-white tracking-tight">MX PRO <span class="text-red-500">FIGHTER</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Tu tienda deportiva especializada en artículos de combate, fitness, fútbol, natación, yoga, salud ortopédica y fabricación propia en el corazón de la Ciudad de México.
+          </p>
+          <div class="text-xs space-y-1 text-slate-300">
+            <p class="font-bold text-white">📍 16 de Septiembre #11, Locales 64 y 73</p>
+            <p class="text-slate-400">Junto al elevador, Centro Histórico, CDMX</p>
+            <p class="pt-1">📞 WhatsApp: <a href="https://wa.me/5215620304320" target="_blank" class="text-emerald-400 hover:underline font-bold">+52 1 56 2030 4320</a></p>
+          </div>
+        </div>
+
+        <!-- Columna 2: Categorías de la Tienda -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-black text-white uppercase tracking-wider">Categorías Principales</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#categorias" class="hover:text-red-400 transition">Box, Karate, Taekwondo &amp; MMA</a></li>
+            <li><a href="#categorias" class="hover:text-red-400 transition">Muay Thai &amp; Judo (Protecciones)</a></li>
+            <li><a href="#categorias" class="hover:text-red-400 transition">Fútbol (Playeras &amp; Uniformes)</a></li>
+            <li><a href="#categorias" class="hover:text-red-400 transition">Natación, Yoga &amp; Gimnasio</a></li>
+            <li><a href="#categorias" class="hover:text-red-400 transition">Soportes Elásticos &amp; Ortopédicos</a></li>
+            <li><a href="#categorias" class="text-amber-400 font-bold hover:underline transition">Fabricación Propia &amp; Marca</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Promociones & Navegación -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-black text-white uppercase tracking-wider">Promociones &amp; Enlaces</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#beneficios" class="hover:text-red-400 transition">Mayoreo Mixto (Desde 5 piezas)</a></li>
+            <li><a href="#beneficios" class="hover:text-red-400 transition">Hasta 3 MSI (Mínimo $10,000 MXN)</a></li>
+            <li><a href="#beneficios" class="hover:text-red-400 transition">Servicio Pick Up Express</a></li>
+            <li><a href="producto.html" class="text-amber-400 font-bold hover:underline transition">Ficha de Producto (Guantes Pro)</a></li>
+            <li><a href="https://maps.app.goo.gl/zX3SFAjF4c9jypPaA" target="_blank" class="hover:text-red-400 transition">Ver Ubicación en Google Maps 📍</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: HORARIOS DE ATENCIÓN EXACTOS SOLICITADOS -->
+        <div class="space-y-3 bg-brand-surface p-5 rounded-2xl border border-brand-border">
+          <h4 class="text-xs font-black text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span>⏰</span>
+            <span>Horarios de Atención</span>
+          </h4>
+          
+          <div class="space-y-2 text-xs">
+            <!-- Lunes a Viernes -->
+            <div class="pb-2 border-b border-brand-border/60">
+              <span class="text-slate-400 block font-medium">Lunes a Viernes:</span>
+              <span class="text-white font-black text-sm">10:00 AM - 7:00 PM</span>
+            </div>
+            <!-- Sábados -->
+            <div class="pb-2 border-b border-brand-border/60">
+              <span class="text-slate-400 block font-medium">Sábados:</span>
+              <span class="text-white font-black text-sm">10:00 AM - 8:00 PM</span>
+            </div>
+            <!-- Domingos -->
+            <div>
+              <span class="text-slate-400 block font-medium">Domingos:</span>
+              <span class="text-amber-400 font-black text-sm">11:00 AM - 5:00 PM</span>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5215620304320" target="_blank" class="mt-3 block text-center w-full py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-black transition">
+            Pedir por WhatsApp
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Fila Inferior de Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Mx Pro Fighter. Todos los derechos reservados. 16 de Septiembre #11 (Locales 64 y 73), Centro Histórico, CDMX.</p>
+        <p class="flex items-center gap-2">
+          <span>Aceptamos Tarjetas, Efectivo y Transferencias</span>
+          <span>•</span>
+          <span class="text-amber-400 font-bold">3 MSI</span>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- MODAL RÁPIDO DE PRODUCTO                                  -->
+  <!-- ========================================================= -->
+  <div id="modal-producto" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-brand-dark w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border border-brand-border relative animate-in fade-in zoom-in duration-200">
+      
+      <button onclick="cerrarModalProducto()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-brand-surface hover:bg-slate-800 text-white flex items-center justify-center font-bold">
+        ✕
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="bg-slate-950 p-8 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-brand-border">
+          <span id="modal-categoria" class="text-xs font-bold text-red-500 uppercase mb-3">Deportes</span>
+          <div id="modal-emoji" class="text-8xl my-3">🏆</div>
+          <span class="text-xs text-slate-400">Mx Pro Fighter Oficial</span>
+        </div>
+
+        <div class="p-6 sm:p-8 space-y-4">
+          <div>
+            <h3 id="modal-titulo" class="text-xl font-black text-white">Artículo Deportivo</h3>
+            <p id="modal-precio" class="text-2xl font-black text-amber-400">$380 MXN</p>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Disponible para <strong>retiro express con Servicio Pick Up</strong> o envío con <strong>Mayoreo Mixto desde 5 piezas</strong> con descuento extra.
+          </p>
+
+          <div class="pt-2 space-y-2">
+            <a href="https://wa.me/5215620304320" target="_blank" class="block text-center w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow transition">
+              Apartar por WhatsApp (+52 1 56 2030 4320)
+            </a>
+            <a href="producto.html" class="block text-center w-full py-2.5 bg-brand-surface hover:bg-slate-800 text-white font-bold text-xs rounded-xl transition">
+              Ver Ficha Técnica Completa (PDP) →
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- SCRIPTS DE INTERACCIÓN                                    -->
+  <!-- ========================================================= -->
+  <script>
+    // Control del Menú Móvil
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileToggle.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden', !isHidden);
+      iconClose.classList.toggle('hidden', isHidden);
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
+    });
+
+    // Control del Modal de Producto
+    const modal = document.getElementById('modal-producto');
+    const modalTitulo = document.getElementById('modal-titulo');
+    const modalPrecio = document.getElementById('modal-precio');
+    const modalCategoria = document.getElementById('modal-categoria');
+
+    function abrirModalProducto(titulo, precio, categoria) {
+      modalTitulo.innerText = titulo;
+      modalPrecio.innerText = precio;
+      modalCategoria.innerText = categoria;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    // Envío del Formulario a WhatsApp con todos los parámetros
+    function enviarAWhatsApp(event) {
+      event.preventDefault();
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const categoria = document.getElementById('categoria').value;
+      const tipoCompra = document.getElementById('tipo_compra').value;
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      if (!nombre || !telefono || !mensaje) {
+        alert('Por favor, completa todos los campos requeridos (*)');
+        return;
+      }
+
+      // Número WhatsApp oficial: +52 1 56 2030 4320
+      const numeroWhatsApp = '5215620304320';
+
+      const textoMensaje = 
+        `🥊 *NUEVA COTIZACIÓN / PEDIDO - MX PRO FIGHTER* 🥊\n\n` +
+        `👤 *Nombre:* ${nombre}\n` +
+        `📱 *Teléfono/WhatsApp:* ${telefono}\n` +
+        `🥋 *Categoría:* ${categoria}\n` +
+        `📦 *Tipo de Compra:* ${tipoCompra}\n\n` +
+        `📝 *Detalles del Pedido / Dudas:*\n${mensaje}\n\n` +
+        `📍 _Enviado desde el formulario de la Landing Page_`;
+
+      const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoMensaje)}`;
+
+      // Abrir WhatsApp en pestaña nueva
+      window.open(urlWhatsApp, '_blank');
+    }
+  </script>
+
+</body>
+</html>

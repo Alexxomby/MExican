@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guantes Mx Pro Leather 100% Piel | Fabricación Propia | Mx Pro Fighter CDMX</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#dc2626',
+              darkred: '#991b1b',
+              gold: '#f59e0b',
+              dark: '#090a0f',
+              surface: '#12141c',
+              border: '#232736'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- TOPBAR -->
+  <div class="bg-gradient-to-r from-red-700 via-red-600 to-amber-600 text-white text-xs py-2 px-4 text-center font-bold tracking-wide flex items-center justify-center gap-x-4 gap-y-1 flex-wrap shadow-md">
+    <span>🔥 <strong>MAYOREO MIXTO:</strong> Desde 5 piezas combinadas con hasta 5% OFF extra o regalos</span>
+    <span class="hidden md:inline">•</span>
+    <span>💳 Hasta 3 MSI en compras mínimas de $10,000 MXN</span>
+    <span class="hidden md:inline">•</span>
+    <span>🛍️ Servicio Pick Up listo desde un día antes en CDMX</span>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-brand-border transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-4">
+        
+        <!-- Logo -->
+        <a href="index.html#inicio" class="flex items-center gap-3 shrink-0 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-red-600/30 group-hover:scale-105 transition-transform">
+            ⚡
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-black tracking-tighter text-white leading-none flex items-center gap-1">
+              MX PRO <span class="text-red-500">FIGHTER</span>
+            </span>
+            <span class="text-[9px] font-extrabold tracking-widest text-amber-400 uppercase">Artículos Deportivos &amp; Combate</span>
+          </div>
+        </a>
+
+        <!-- Navegación -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-300">
+          <a href="index.html#inicio" class="hover:text-red-500 transition-colors">Inicio</a>
+          <a href="index.html#categorias" class="hover:text-red-500 transition-colors">Categorías</a>
+          <a href="index.html#beneficios" class="hover:text-red-500 transition-colors">Beneficios &amp; Mayoreo</a>
+          <a href="index.html#productos" class="hover:text-red-500 transition-colors">Catálogo</a>
+          <a href="index.html#qa" class="hover:text-red-500 transition-colors">Q&amp;A</a>
+          <a href="index.html#contacto" class="hover:text-red-500 transition-colors">Tienda &amp; Horarios</a>
+        </nav>
+
+        <!-- Acciones -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="index.html#beneficios" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-600/20 border border-amber-500/40 text-amber-400 text-xs font-bold transition">
+            <span>Mayoreo desde 5 piezas</span>
+          </a>
+
+          <a href="https://wa.me/5215620304320?text=Hola,%20quisiera%20cotizar%20los%20Guantes%20Mx%20Pro%20Leather%20y%20conocer%20descuentos%20de%20mayoreo" target="_blank" class="flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl shadow-md transition">
+            <span>WhatsApp</span>
+          </a>
+
+          <a href="index.html#productos" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-slate-300 bg-brand-surface border border-brand-border hover:bg-slate-800 rounded-lg transition">
+            ← Volver a Inicio
+          </a>
+
+          <button id="pdp-toggle" type="button" class="p-2 text-slate-300 hover:bg-brand-surface rounded-lg lg:hidden">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Menú móvil PDP -->
+    <div id="pdp-menu" class="hidden lg:hidden border-b border-brand-border bg-brand-dark px-4 py-3 space-y-2">
+      <a href="index.html#inicio" class="block py-2 text-sm font-semibold text-slate-300">Inicio</a>
+      <a href="index.html#categorias" class="block py-2 text-sm font-semibold text-slate-300">Categorías</a>
+      <a href="index.html#beneficios" class="block py-2 text-sm font-semibold text-slate-300">Beneficios y Promociones</a>
+      <a href="index.html#productos" class="block py-2 text-sm font-semibold text-slate-300">Catálogo</a>
+      <a href="index.html#contacto" class="block py-2 text-sm font-semibold text-slate-300">Contacto &amp; Horarios</a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-xs text-slate-400 flex items-center gap-2 overflow-x-auto whitespace-nowrap">
+    <a href="index.html#inicio" class="hover:text-red-400 transition">Inicio</a>
+    <span>/</span>
+    <a href="index.html#categorias" class="hover:text-red-400 transition">Artes Marciales &amp; Combate</a>
+    <span>/</span>
+    <a href="index.html#productos" class="hover:text-red-400 transition">Boxeo</a>
+    <span>/</span>
+    <span class="text-white font-bold">Guantes Mx Pro Leather 100% Piel (Fabricación Propia)</span>
+  </nav>
+
+  <!-- PÁGINA DEL PRODUCTO (PDP) -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+      
+      <!-- COLUMNA IZQUIERDA: GALERÍA -->
+      <div class="lg:col-span-7 space-y-4">
+        
+        <!-- Imagen Principal -->
+        <div class="relative bg-brand-surface rounded-3xl border border-brand-border p-8 sm:p-14 flex items-center justify-center overflow-hidden shadow-2xl">
+          <div class="absolute top-5 left-5 flex flex-col gap-1.5 z-10">
+            <span class="px-3 py-1 rounded-full text-xs font-black uppercase bg-red-600 text-white shadow-sm">
+              Fabricación Propia
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-dark border border-brand-border text-amber-400 shadow-sm">
+              100% Cuero Genuino
+            </span>
+          </div>
+
+          <div id="pdp-img" class="text-9xl sm:text-[160px] transform hover:scale-105 transition-transform duration-500 select-none drop-shadow-[0_15px_30px_rgba(220,38,38,0.35)]">
+            🥊
+          </div>
+
+          <div class="absolute bottom-5 left-5 text-xs font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-800 px-3 py-1 rounded-full flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Pick Up Express Disponible (Locales 64 y 73)
+          </div>
+        </div>
+
+        <!-- Miniaturas interactivas -->
+        <div class="grid grid-cols-4 gap-3 sm:gap-4">
+          <button onclick="document.getElementById('pdp-img').innerText = '🥊'" class="p-4 bg-brand-surface border-2 border-red-600 rounded-2xl flex items-center justify-center text-3xl shadow transition">
+            🥊
+          </button>
+          <button onclick="document.getElementById('pdp-img').innerText = '🛡️'" class="p-4 bg-brand-surface border border-brand-border hover:border-red-600 rounded-2xl flex items-center justify-center text-3xl shadow transition">
+            🛡️
+          </button>
+          <button onclick="document.getElementById('pdp-img').innerText = '⚙️'" class="p-4 bg-brand-surface border border-brand-border hover:border-red-600 rounded-2xl flex items-center justify-center text-3xl shadow transition">
+            ⚙️
+          </button>
+          <button onclick="document.getElementById('pdp-img').innerText = '📦'" class="p-4 bg-brand-surface border border-brand-border hover:border-red-600 rounded-2xl flex items-center justify-center text-3xl shadow transition">
+            📦
+          </button>
+        </div>
+
+        <!-- Atributos Clave -->
+        <div class="grid grid-cols-3 gap-3 pt-2">
+          <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border text-center">
+            <p class="text-xs text-slate-400 font-bold uppercase">Fabricación</p>
+            <p class="text-sm sm:text-base font-black text-white">Marca Propia</p>
+            <span class="text-[10px] text-amber-400 font-semibold">Taller Especializado</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border text-center">
+            <p class="text-xs text-slate-400 font-bold uppercase">Material</p>
+            <p class="text-sm sm:text-base font-black text-white">Piel Vacuna</p>
+            <span class="text-[10px] text-red-400 font-semibold">Máxima Resistencia</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border text-center">
+            <p class="text-xs text-slate-400 font-bold uppercase">Mayoreo</p>
+            <p class="text-sm sm:text-base font-black text-white">Desde 5 pzas</p>
+            <span class="text-[10px] text-emerald-400 font-semibold">Mayoreo Mixto</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COLUMNA DERECHA: INFORMACIÓN Y ACCIONES -->
+      <div class="lg:col-span-5 space-y-6">
+        
+        <div class="space-y-2">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-extrabold text-red-500 uppercase tracking-wider">MX PRO FIGHTER • CDMX</span>
+            <span class="text-slate-400">SKU: MX-FIGHT-PRO</span>
+          </div>
+
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
+            Guantes Mx Pro Leather 100% Piel Genuina
+          </h1>
+
+          <div class="flex items-center gap-3 pt-1">
+            <div class="flex text-amber-400 text-sm font-bold">★★★★★</div>
+            <span class="text-xs font-bold text-white">4.9 / 5.0</span>
+            <span class="text-xs text-slate-500">•</span>
+            <span class="text-xs text-slate-400">Excelente calidad y precio accesible</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Precio y Promociones -->
+        <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-3">
+          <div class="flex items-baseline gap-3">
+            <span class="text-3xl sm:text-4xl font-black text-white">$1,199 MXN</span>
+            <span class="text-sm text-slate-500 line-through">$1,450 MXN</span>
+            <span class="px-2.5 py-1 rounded-full text-xs font-black bg-red-600/20 text-red-400 border border-red-600/40">
+              Ahorras $251 MXN
+            </span>
+          </div>
+
+          <!-- Recordatorio de MSI y Mayoreo -->
+          <div class="space-y-1.5 pt-1 text-xs text-slate-300 border-t border-brand-border/60">
+            <p class="flex items-center gap-1.5 text-amber-400 font-bold">
+              <span>💳</span> <span>Hasta 3 Meses Sin Intereses en compras de $10,000 MXN o más.</span>
+            </p>
+            <p class="flex items-center gap-1.5 text-emerald-400 font-bold">
+              <span>📦</span> <span>Mayoreo mixto: combina 5 piezas o más y obtén 5% OFF extra en efectivo/transferencia.</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Selector de Color -->
+        <div class="space-y-3">
+          <div class="flex justify-between items-center text-xs">
+            <span class="font-bold uppercase text-slate-300">Color: <strong class="text-white" id="pdp-color">Rojo Clásico / Negro</strong></span>
+          </div>
+          <div class="flex items-center gap-3">
+            <button onclick="document.getElementById('pdp-color').innerText = 'Rojo Clásico / Negro'" class="w-9 h-9 rounded-full bg-red-600 ring-2 ring-offset-2 ring-offset-brand-dark ring-red-500"></button>
+            <button onclick="document.getElementById('pdp-color').innerText = 'Negro Mate / Stealth'" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-700 ring-2 ring-offset-2 ring-offset-brand-dark ring-transparent hover:ring-slate-500"></button>
+            <button onclick="document.getElementById('pdp-color').innerText = 'Blanco Titanio / Oro'" class="w-9 h-9 rounded-full bg-amber-400 ring-2 ring-offset-2 ring-offset-brand-dark ring-transparent hover:ring-amber-300"></button>
+          </div>
+        </div>
+
+        <!-- Selector de Onzas -->
+        <div class="space-y-3">
+          <div class="flex justify-between items-center text-xs">
+            <span class="font-bold uppercase text-slate-300">Seleccionar Onzas (oz)</span>
+            <span class="text-amber-400 text-[11px] font-bold">Fabricación con molde anatómico</span>
+          </div>
+          
+          <div class="grid grid-cols-4 gap-2 text-xs font-bold">
+            <button class="py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 transition">10 oz</button>
+            <button class="py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 transition">12 oz</button>
+            <button class="py-2.5 rounded-xl border-2 border-red-600 bg-red-600/20 text-red-400 transition">14 oz</button>
+            <button class="py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 transition">16 oz</button>
+          </div>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="space-y-3 pt-2">
+          <a href="https://wa.me/5215620304320?text=Hola,%20me%20interesa%20apartar%20los%20Guantes%20Mx%20Pro%20Leather%20(Servicio%20Pick%20Up%20o%20Env%C3%ADo)" target="_blank" class="w-full py-4 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm shadow-lg transition flex items-center justify-center gap-2">
+            <span>Pedir o Apartar con Pick Up (+52 1 56 2030 4320)</span>
+          </a>
+
+          <a href="index.html#mayoreo-info" class="w-full py-3.5 px-6 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-xs transition flex items-center justify-center gap-2">
+            <span>Cotizar Mayoreo Mixto (Combina 5+ artículos)</span>
+          </a>
+        </div>
+
+        <!-- Ventajas de Compra -->
+        <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border space-y-2.5 text-xs text-slate-300">
+          <div class="flex items-center gap-3">
+            <span class="text-base">🛍️</span>
+            <div><strong>Servicio Pick Up:</strong> Pídelo desde un día antes y recógelo listo en 16 de Septiembre #11.</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-base">⚙️</span>
+            <div><strong>Personalización:</strong> ¿Quieres este guante con el logo de tu gimnasio? ¡Lo fabricamos!</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-base">💳</span>
+            <div><strong>Pagos:</strong> Tarjetas, efectivo en tienda y transferencias bancarias.</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PESTAÑAS TÉCNICAS -->
+    <section class="mt-16 bg-brand-surface rounded-3xl border border-brand-border p-6 sm:p-10">
+      <div class="flex border-b border-brand-border gap-6 sm:gap-10 text-sm font-bold">
+        <button class="pb-4 text-red-500 border-b-2 border-red-500 whitespace-nowrap">
+          Descripción &amp; Fabricación
+        </button>
+        <button class="pb-4 text-slate-400 hover:text-white transition whitespace-nowrap">
+          Especificaciones Técnicas
+        </button>
+        <button class="pb-4 text-slate-400 hover:text-white transition whitespace-nowrap">
+          Condiciones de Mayoreo
+        </button>
+      </div>
+
+      <div class="py-6 space-y-4 text-slate-300 text-sm leading-relaxed">
+        <h3 class="text-lg font-bold text-white">Fabricación propia con piel vacuna de primera calidad</h3>
+        <p>
+          En <strong>Mx Pro Fighter</strong> confeccionamos cada par con cuero genuino seleccionado y costuras dobles reforzadas con hilo de alta tenacidad. El forro interior transpirable evita la acumulación de humedad y malos olores, mientras que el relleno multicapa de látex distribuye la fuerza del golpeo protegiendo nudillos y muñecas en cada asalto.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER CON HORARIOS EXACTOS -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-brand-border mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-brand-border">
+        
+        <div class="space-y-3">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white font-black">⚡</div>
+            <span class="text-xl font-black text-white">MX PRO <span class="text-red-500">FIGHTER</span></span>
+          </div>
+          <p class="text-xs text-slate-400">Artículos deportivos, combate, fútbol, natación, yoga, salud ortopédica y fabricación propia.</p>
+          <p class="text-xs text-white">📍 16 de Septiembre #11, Locales 64 y 73, CDMX</p>
+        </div>
+
+        <div class="space-y-2 text-xs">
+          <h4 class="font-bold text-white uppercase">Categorías</h4>
+          <p><a href="index.html#categorias" class="hover:text-red-400">Artes Marciales y Combate</a></p>
+          <p><a href="index.html#categorias" class="hover:text-red-400">Deportes &amp; Fitness (Fútbol, Natación, Yoga)</a></p>
+          <p><a href="index.html#categorias" class="hover:text-red-400">Salud y Soporte Ortopédico</a></p>
+          <p><a href="index.html#categorias" class="text-amber-400 font-bold hover:underline">Fabricación Propia</a></p>
+        </div>
+
+        <div class="space-y-2 text-xs">
+          <h4 class="font-bold text-white uppercase">Beneficios</h4>
+          <p>• Mayoreo Mixto desde 5 piezas combinadas</p>
+          <p>• Hasta 3 MSI en compras de $10,000 MXN o más</p>
+          <p>• Servicio Pick Up listo desde un día antes</p>
+          <p>• Todos los métodos de pago aceptados</p>
+        </div>
+
+        <!-- Horarios Exactos en PDP -->
+        <div class="space-y-2 bg-brand-surface p-4 rounded-xl border border-brand-border text-xs">
+          <h4 class="font-black text-amber-400 uppercase">Horarios de Atención</h4>
+          <p><strong class="text-slate-300">Lunes a Viernes:</strong> 10:00 AM - 7:00 PM</p>
+          <p><strong class="text-slate-300">Sábados:</strong> 10:00 AM - 8:00 PM</p>
+          <p><strong class="text-amber-400">Domingos:</strong> 11:00 AM - 5:00 PM</p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Mx Pro Fighter. 16 de Septiembre 11, Locales 64 y 73, Centro Histórico, CDMX.</p>
+        <p>WhatsApp: +52 1 56 2030 4320</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const pdpToggle = document.getElementById('pdp-toggle');
+    const pdpMenu = document.getElementById('pdp-menu');
+    if (pdpToggle) {
+      pdpToggle.addEventListener('click', () => pdpMenu.classList.toggle('hidden'));
+    }
+  </script>
+
+</body>
+</html>
