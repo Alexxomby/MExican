@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guantes Mx Pro Leather 100% Piel | Fabricación Propia | Mx Pro Fighter CDMX</title>
-  
+  <title>Karategui Tusah Clásico 7.5 oz – WKF Approved | Artículos Deportivos CDMX</title>
+  <meta name="description" content="Karategui Tusah Clásico 7.5 oz aprobado por la WKF. Ideal para entrenamiento y competencia. Tallas 000 a 7. $600 MXN. Disponible en tienda, Centro Histórico CDMX.">
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -33,6 +34,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    .thumb-btn { transition: all 0.2s; }
+    .thumb-btn.active { border-color: #dc2626; background: rgba(220,38,38,0.12); }
+    .tab-btn.active { color: #ef4444; border-bottom-color: #ef4444; }
+    .size-btn.selected { border-color: #dc2626; background: rgba(220,38,38,0.15); color: #f87171; }
+  </style>
 </head>
 <body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-red-600 selection:text-white">
 
@@ -49,7 +57,7 @@
   <header class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-brand-border transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 sm:h-20 gap-4">
-        
+
         <!-- Logo -->
         <a href="index.html#inicio" class="flex items-center gap-3 shrink-0 group">
           <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-red-600/30 group-hover:scale-105 transition-transform">
@@ -63,7 +71,7 @@
           </div>
         </a>
 
-        <!-- Navegación -->
+        <!-- Navegación Desktop -->
         <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-300">
           <a href="index.html#inicio" class="hover:text-red-500 transition-colors">Inicio</a>
           <a href="index.html#categorias" class="hover:text-red-500 transition-colors">Categorías</a>
@@ -75,18 +83,12 @@
 
         <!-- Acciones -->
         <div class="flex items-center gap-2 sm:gap-3">
-          <a href="index.html#beneficios" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-600/20 border border-amber-500/40 text-amber-400 text-xs font-bold transition">
-            <span>Mayoreo desde 5 piezas</span>
-          </a>
-
-          <a href="https://wa.me/5215620304320?text=Hola,%20quisiera%20cotizar%20los%20Guantes%20Mx%20Pro%20Leather%20y%20conocer%20descuentos%20de%20mayoreo" target="_blank" class="flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl shadow-md transition">
+          <a href="https://wa.me/5215620304320?text=Hola%2C%20quisiera%20cotizar%20el%20Karategui%20Tusah%20Cl%C3%A1sico%207.5%20oz%20WKF%20y%20saber%20disponibilidad" target="_blank" class="flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl shadow-md transition">
             <span>WhatsApp</span>
           </a>
-
           <a href="index.html#productos" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-slate-300 bg-brand-surface border border-brand-border hover:bg-slate-800 rounded-lg transition">
-            ← Volver a Inicio
+            ← Catálogo
           </a>
-
           <button id="pdp-toggle" type="button" class="p-2 text-slate-300 hover:bg-brand-surface rounded-lg lg:hidden">
             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -97,11 +99,11 @@
       </div>
     </div>
 
-    <!-- Menú móvil PDP -->
+    <!-- Menú móvil -->
     <div id="pdp-menu" class="hidden lg:hidden border-b border-brand-border bg-brand-dark px-4 py-3 space-y-2">
       <a href="index.html#inicio" class="block py-2 text-sm font-semibold text-slate-300">Inicio</a>
       <a href="index.html#categorias" class="block py-2 text-sm font-semibold text-slate-300">Categorías</a>
-      <a href="index.html#beneficios" class="block py-2 text-sm font-semibold text-slate-300">Beneficios y Promociones</a>
+      <a href="index.html#beneficios" class="block py-2 text-sm font-semibold text-slate-300">Beneficios y Mayoreo</a>
       <a href="index.html#productos" class="block py-2 text-sm font-semibold text-slate-300">Catálogo</a>
       <a href="index.html#contacto" class="block py-2 text-sm font-semibold text-slate-300">Contacto &amp; Horarios</a>
     </div>
@@ -113,33 +115,40 @@
     <span>/</span>
     <a href="index.html#categorias" class="hover:text-red-400 transition">Artes Marciales &amp; Combate</a>
     <span>/</span>
-    <a href="index.html#productos" class="hover:text-red-400 transition">Boxeo</a>
+    <a href="index.html#productos" class="hover:text-red-400 transition">Karate</a>
     <span>/</span>
-    <span class="text-white font-bold">Guantes Mx Pro Leather 100% Piel (Fabricación Propia)</span>
+    <span class="text-white font-bold">Karategui Tusah Clásico 7.5 oz – WKF Approved</span>
   </nav>
 
   <!-- PÁGINA DEL PRODUCTO (PDP) -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12">
-    
+
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-      
+
       <!-- COLUMNA IZQUIERDA: GALERÍA -->
       <div class="lg:col-span-7 space-y-4">
-        
+
         <!-- Imagen Principal -->
-        <div class="relative bg-brand-surface rounded-3xl border border-brand-border p-8 sm:p-14 flex items-center justify-center overflow-hidden shadow-2xl">
+        <div class="relative bg-brand-surface rounded-3xl border border-brand-border p-8 sm:p-14 flex items-center justify-center overflow-hidden shadow-2xl min-h-[320px]">
           <div class="absolute top-5 left-5 flex flex-col gap-1.5 z-10">
             <span class="px-3 py-1 rounded-full text-xs font-black uppercase bg-red-600 text-white shadow-sm">
-              Fabricación Propia
+              WKF Approved
             </span>
             <span class="px-3 py-1 rounded-full text-xs font-bold bg-brand-dark border border-brand-border text-amber-400 shadow-sm">
-              100% Cuero Genuino
+              SKU: 5222-224
             </span>
           </div>
 
-          <div id="pdp-img" class="text-9xl sm:text-[160px] transform hover:scale-105 transition-transform duration-500 select-none drop-shadow-[0_15px_30px_rgba(220,38,38,0.35)]">
-            🥊
-          </div>
+          <!-- Imagen real del producto desde asianatusah.shop -->
+          <img
+            id="pdp-img"
+            src="https://www.asianatusah.shop/wp-content/uploads/2026/03/Karategui-Clasico-Tusah-7.5-oz.jpg"
+            alt="Karategui Tusah Clásico 7.5 oz – WKF Approved"
+            class="max-h-80 object-contain transform hover:scale-105 transition-transform duration-500 drop-shadow-[0_12px_24px_rgba(220,38,38,0.25)] rounded-xl"
+            onerror="this.style.display='none'; document.getElementById('pdp-fallback').style.display='flex';"
+          >
+          <!-- Fallback emoji si la imagen no carga -->
+          <div id="pdp-fallback" class="hidden text-[120px] items-center justify-center select-none drop-shadow-[0_15px_30px_rgba(220,38,38,0.35)]">🥋</div>
 
           <div class="absolute bottom-5 left-5 text-xs font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-800 px-3 py-1 rounded-full flex items-center gap-1.5">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -149,16 +158,16 @@
 
         <!-- Miniaturas interactivas -->
         <div class="grid grid-cols-4 gap-3 sm:gap-4">
-          <button onclick="document.getElementById('pdp-img').innerText = '🥊'" class="p-4 bg-brand-surface border-2 border-red-600 rounded-2xl flex items-center justify-center text-3xl shadow transition">
-            🥊
+          <button onclick="cambiarImagen('https://www.asianatusah.shop/wp-content/uploads/2026/03/Karategui-Clasico-Tusah-7.5-oz.jpg', this)" class="thumb-btn active p-3 bg-brand-surface border-2 border-red-600 rounded-2xl flex items-center justify-center overflow-hidden shadow transition">
+            <img src="https://www.asianatusah.shop/wp-content/uploads/2026/03/Karategui-Clasico-Tusah-7.5-oz-350x435.jpg" alt="Vista frontal" class="h-16 object-contain" onerror="this.outerHTML='<span class=\'text-2xl\'>🥋</span>'">
           </button>
-          <button onclick="document.getElementById('pdp-img').innerText = '🛡️'" class="p-4 bg-brand-surface border border-brand-border hover:border-red-600 rounded-2xl flex items-center justify-center text-3xl shadow transition">
-            🛡️
+          <button onclick="cambiarImagen('https://www.asianatusah.shop/wp-content/uploads/2026/03/Karategui-Clasico-1-350x435.png', this)" class="thumb-btn p-3 bg-brand-surface border border-brand-border hover:border-red-600 rounded-2xl flex items-center justify-center overflow-hidden shadow transition">
+            <img src="https://www.asianatusah.shop/wp-content/uploads/2026/03/Karategui-Clasico-1-350x435.png" alt="Vista trasera" class="h-16 object-contain" onerror="this.outerHTML='<span class=\'text-2xl\'>🥋</span>'">
           </button>
-          <button onclick="document.getElementById('pdp-img').innerText = '⚙️'" class="p-4 bg-brand-surface border border-brand-border hover:border-red-600 rounded-2xl flex items-center justify-center text-3xl shadow transition">
-            ⚙️
+          <button onclick="cambiarEmoji('🏅', this)" class="thumb-btn p-3 bg-brand-surface border border-brand-border hover:border-red-600 rounded-2xl flex items-center justify-center text-3xl shadow transition">
+            🏅
           </button>
-          <button onclick="document.getElementById('pdp-img').innerText = '📦'" class="p-4 bg-brand-surface border border-brand-border hover:border-red-600 rounded-2xl flex items-center justify-center text-3xl shadow transition">
+          <button onclick="cambiarEmoji('📦', this)" class="thumb-btn p-3 bg-brand-surface border border-brand-border hover:border-red-600 rounded-2xl flex items-center justify-center text-3xl shadow transition">
             📦
           </button>
         </div>
@@ -166,14 +175,14 @@
         <!-- Atributos Clave -->
         <div class="grid grid-cols-3 gap-3 pt-2">
           <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border text-center">
-            <p class="text-xs text-slate-400 font-bold uppercase">Fabricación</p>
-            <p class="text-sm sm:text-base font-black text-white">Marca Propia</p>
-            <span class="text-[10px] text-amber-400 font-semibold">Taller Especializado</span>
+            <p class="text-xs text-slate-400 font-bold uppercase">Aprobación</p>
+            <p class="text-sm sm:text-base font-black text-white">WKF</p>
+            <span class="text-[10px] text-red-400 font-semibold">Competencia Oficial</span>
           </div>
           <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border text-center">
-            <p class="text-xs text-slate-400 font-bold uppercase">Material</p>
-            <p class="text-sm sm:text-base font-black text-white">Piel Vacuna</p>
-            <span class="text-[10px] text-red-400 font-semibold">Máxima Resistencia</span>
+            <p class="text-xs text-slate-400 font-bold uppercase">Gramaje</p>
+            <p class="text-sm sm:text-base font-black text-white">7.5 oz</p>
+            <span class="text-[10px] text-amber-400 font-semibold">Ligero y Transpirable</span>
           </div>
           <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border text-center">
             <p class="text-xs text-slate-400 font-bold uppercase">Mayoreo</p>
@@ -186,81 +195,84 @@
 
       <!-- COLUMNA DERECHA: INFORMACIÓN Y ACCIONES -->
       <div class="lg:col-span-5 space-y-6">
-        
+
         <div class="space-y-2">
           <div class="flex items-center justify-between text-xs">
-            <span class="font-extrabold text-red-500 uppercase tracking-wider">MX PRO FIGHTER • CDMX</span>
-            <span class="text-slate-400">SKU: MX-FIGHT-PRO</span>
+            <span class="font-extrabold text-red-500 uppercase tracking-wider">TUSAH • KARATE</span>
+            <span class="text-slate-400">SKU: 5222-224</span>
           </div>
 
           <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
-            Guantes Mx Pro Leather 100% Piel Genuina
+            Karategui Tusah Clásico<br>
+            <span class="text-red-500">7.5 oz – WKF Approved</span>
           </h1>
+
+          <div class="flex flex-wrap items-center gap-2 pt-1">
+            <span class="px-2.5 py-1 rounded-full text-[10px] font-black bg-red-600/20 border border-red-600/40 text-red-400 uppercase">WKF Approved</span>
+            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-800 border border-brand-border text-slate-300">Entrenamiento</span>
+            <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-800 border border-brand-border text-slate-300">Competencia</span>
+          </div>
 
           <div class="flex items-center gap-3 pt-1">
             <div class="flex text-amber-400 text-sm font-bold">★★★★★</div>
             <span class="text-xs font-bold text-white">4.9 / 5.0</span>
             <span class="text-xs text-slate-500">•</span>
-            <span class="text-xs text-slate-400">Excelente calidad y precio accesible</span>
+            <span class="text-xs text-slate-400">Calidad y comodidad superior</span>
           </div>
         </div>
 
         <!-- Tarjeta de Precio y Promociones -->
         <div class="p-5 rounded-2xl bg-brand-surface border border-brand-border space-y-3">
-          <div class="flex items-baseline gap-3">
-            <span class="text-3xl sm:text-4xl font-black text-white">$1,199 MXN</span>
-            <span class="text-sm text-slate-500 line-through">$1,450 MXN</span>
-            <span class="px-2.5 py-1 rounded-full text-xs font-black bg-red-600/20 text-red-400 border border-red-600/40">
-              Ahorras $251 MXN
+          <div class="flex items-baseline gap-3 flex-wrap">
+            <span class="text-3xl sm:text-4xl font-black text-white">$600 MXN</span>
+            <span class="px-2.5 py-1 rounded-full text-xs font-black bg-emerald-600/20 text-emerald-400 border border-emerald-600/40">
+              Precio de Tienda
             </span>
           </div>
 
-          <!-- Recordatorio de MSI y Mayoreo -->
           <div class="space-y-1.5 pt-1 text-xs text-slate-300 border-t border-brand-border/60">
             <p class="flex items-center gap-1.5 text-amber-400 font-bold">
-              <span>💳</span> <span>Hasta 3 Meses Sin Intereses en compras de $10,000 MXN o más.</span>
+              <span>💳</span> <span>Hasta 3 MSI en compras de $10,000 MXN o más. Todos los métodos de pago.</span>
             </p>
             <p class="flex items-center gap-1.5 text-emerald-400 font-bold">
-              <span>📦</span> <span>Mayoreo mixto: combina 5 piezas o más y obtén 5% OFF extra en efectivo/transferencia.</span>
+              <span>📦</span> <span>Mayoreo mixto: combina 5 piezas o más con 5% OFF extra en efectivo/transferencia.</span>
             </p>
           </div>
         </div>
 
-        <!-- Selector de Color -->
+        <!-- Selector de Talla (sistema de artes marciales) -->
         <div class="space-y-3">
           <div class="flex justify-between items-center text-xs">
-            <span class="font-bold uppercase text-slate-300">Color: <strong class="text-white" id="pdp-color">Rojo Clásico / Negro</strong></span>
+            <span class="font-bold uppercase text-slate-300">Talla: <strong class="text-white" id="pdp-talla">000 (130 cm)</strong></span>
+            <a href="#guia-tallas" class="text-amber-400 text-[11px] font-bold hover:underline">Guía de tallas ↓</a>
           </div>
-          <div class="flex items-center gap-3">
-            <button onclick="document.getElementById('pdp-color').innerText = 'Rojo Clásico / Negro'" class="w-9 h-9 rounded-full bg-red-600 ring-2 ring-offset-2 ring-offset-brand-dark ring-red-500"></button>
-            <button onclick="document.getElementById('pdp-color').innerText = 'Negro Mate / Stealth'" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-700 ring-2 ring-offset-2 ring-offset-brand-dark ring-transparent hover:ring-slate-500"></button>
-            <button onclick="document.getElementById('pdp-color').innerText = 'Blanco Titanio / Oro'" class="w-9 h-9 rounded-full bg-amber-400 ring-2 ring-offset-2 ring-offset-brand-dark ring-transparent hover:ring-amber-300"></button>
-          </div>
-        </div>
 
-        <!-- Selector de Onzas -->
-        <div class="space-y-3">
-          <div class="flex justify-between items-center text-xs">
-            <span class="font-bold uppercase text-slate-300">Seleccionar Onzas (oz)</span>
-            <span class="text-amber-400 text-[11px] font-bold">Fabricación con molde anatómico</span>
-          </div>
-          
           <div class="grid grid-cols-4 gap-2 text-xs font-bold">
-            <button class="py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 transition">10 oz</button>
-            <button class="py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 transition">12 oz</button>
-            <button class="py-2.5 rounded-xl border-2 border-red-600 bg-red-600/20 text-red-400 transition">14 oz</button>
-            <button class="py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 transition">16 oz</button>
+            <button onclick="seleccionarTalla(this, '000 (130 cm)')" class="size-btn selected py-2.5 rounded-xl border border-brand-border bg-brand-surface text-slate-200 transition">000</button>
+            <button onclick="seleccionarTalla(this, '00 (140 cm)')" class="size-btn py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 text-slate-200 transition">00</button>
+            <button onclick="seleccionarTalla(this, '0 (150 cm)')" class="size-btn py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 text-slate-200 transition">0</button>
+            <button onclick="seleccionarTalla(this, '1 (160 cm)')" class="size-btn py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 text-slate-200 transition">1</button>
+            <button onclick="seleccionarTalla(this, '2 (170 cm)')" class="size-btn py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 text-slate-200 transition">2</button>
+            <button onclick="seleccionarTalla(this, '3 (180 cm)')" class="size-btn py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 text-slate-200 transition">3</button>
+            <button onclick="seleccionarTalla(this, '4 (190 cm)')" class="size-btn py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 text-slate-200 transition">4</button>
+            <button onclick="seleccionarTalla(this, '5 (200 cm)')" class="size-btn py-2.5 rounded-xl border border-brand-border bg-brand-surface hover:border-red-500 text-slate-200 transition">5</button>
           </div>
+          <p class="text-[10px] text-slate-500">También disponibles tallas 6 y 7. Consulta disponibilidad por WhatsApp.</p>
         </div>
 
         <!-- Botones de Acción -->
         <div class="space-y-3 pt-2">
-          <a href="https://wa.me/5215620304320?text=Hola,%20me%20interesa%20apartar%20los%20Guantes%20Mx%20Pro%20Leather%20(Servicio%20Pick%20Up%20o%20Env%C3%ADo)" target="_blank" class="w-full py-4 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm shadow-lg transition flex items-center justify-center gap-2">
-            <span>Pedir o Apartar con Pick Up (+52 1 56 2030 4320)</span>
+          <button onclick="pedirPorWhatsApp()" class="w-full py-4 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm shadow-lg transition flex items-center justify-center gap-2 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.002 0C5.374 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.998l6.332-1.44C8.07 23.52 10 24 12.002 24 18.629 24 24 18.627 24 12S18.629 0 12.002 0zm.001 21.818c-1.846 0-3.558-.499-5.025-1.365l-.36-.214-3.753.852.882-3.65-.232-.373C2.534 15.398 2.18 13.738 2.18 12c0-5.42 4.404-9.818 9.822-9.818 5.418 0 9.82 4.398 9.82 9.818 0 5.421-4.402 9.818-9.82 9.818z"/></svg>
+            <span>Pedir vía WhatsApp (+52 1 56 2030 4320)</span>
+          </button>
+
+          <a href="index.html#contacto" class="w-full py-3.5 px-6 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-xs transition flex items-center justify-center gap-2">
+            <span>Cotizar Mayoreo Mixto (5+ artículos combinados)</span>
           </a>
 
-          <a href="index.html#mayoreo-info" class="w-full py-3.5 px-6 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-black text-xs transition flex items-center justify-center gap-2">
-            <span>Cotizar Mayoreo Mixto (Combina 5+ artículos)</span>
+          <a href="index.html#productos" class="w-full py-3 px-6 rounded-xl bg-brand-surface border border-brand-border hover:bg-slate-800 text-slate-300 font-bold text-xs transition flex items-center justify-center gap-2">
+            ← Ver más productos del catálogo
           </a>
         </div>
 
@@ -268,65 +280,267 @@
         <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border space-y-2.5 text-xs text-slate-300">
           <div class="flex items-center gap-3">
             <span class="text-base">🛍️</span>
-            <div><strong>Servicio Pick Up:</strong> Pídelo desde un día antes y recógelo listo en 16 de Septiembre #11.</div>
+            <div><strong>Servicio Pick Up:</strong> Pídelo desde un día antes y recógelo listo en 16 de Septiembre #11, Locales 64 y 73.</div>
           </div>
           <div class="flex items-center gap-3">
-            <span class="text-base">⚙️</span>
-            <div><strong>Personalización:</strong> ¿Quieres este guante con el logo de tu gimnasio? ¡Lo fabricamos!</div>
+            <span class="text-base">📍</span>
+            <div><strong>Tienda Física:</strong> Centro Histórico, CDMX — junto al elevador. <a href="https://maps.app.goo.gl/zX3SFAjF4c9jypPaA" target="_blank" class="text-red-400 hover:underline">Ver en Google Maps →</a></div>
           </div>
           <div class="flex items-center gap-3">
             <span class="text-base">💳</span>
-            <div><strong>Pagos:</strong> Tarjetas, efectivo en tienda y transferencias bancarias.</div>
+            <div><strong>Pagos:</strong> Tarjetas, efectivo en tienda, transferencias y OXXO.</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-base">⭐</span>
+            <div><strong>Disponibilidad:</strong> Consulta stock antes de ir o pide tu Pick Up express.</div>
           </div>
         </div>
 
       </div>
-
     </div>
 
     <!-- PESTAÑAS TÉCNICAS -->
     <section class="mt-16 bg-brand-surface rounded-3xl border border-brand-border p-6 sm:p-10">
-      <div class="flex border-b border-brand-border gap-6 sm:gap-10 text-sm font-bold">
-        <button class="pb-4 text-red-500 border-b-2 border-red-500 whitespace-nowrap">
-          Descripción &amp; Fabricación
+      <div class="flex border-b border-brand-border gap-0 sm:gap-2 text-sm font-bold overflow-x-auto">
+        <button id="tab-desc" onclick="mostrarTab('desc')" class="tab-btn active pb-4 px-4 text-red-500 border-b-2 border-red-500 whitespace-nowrap">
+          Descripción
         </button>
-        <button class="pb-4 text-slate-400 hover:text-white transition whitespace-nowrap">
-          Especificaciones Técnicas
+        <button id="tab-specs" onclick="mostrarTab('specs')" class="tab-btn pb-4 px-4 text-slate-400 hover:text-white border-b-2 border-transparent transition whitespace-nowrap">
+          Especificaciones
         </button>
-        <button class="pb-4 text-slate-400 hover:text-white transition whitespace-nowrap">
-          Condiciones de Mayoreo
+        <button id="tab-tallas" onclick="mostrarTab('tallas')" class="tab-btn pb-4 px-4 text-slate-400 hover:text-white border-b-2 border-transparent transition whitespace-nowrap">
+          Guía de Tallas
+        </button>
+        <button id="tab-mayoreo" onclick="mostrarTab('mayoreo')" class="tab-btn pb-4 px-4 text-slate-400 hover:text-white border-b-2 border-transparent transition whitespace-nowrap">
+          Mayoreo
         </button>
       </div>
 
-      <div class="py-6 space-y-4 text-slate-300 text-sm leading-relaxed">
-        <h3 class="text-lg font-bold text-white">Fabricación propia con piel vacuna de primera calidad</h3>
+      <!-- Tab: Descripción -->
+      <div id="content-desc" class="py-6 space-y-4 text-slate-300 text-sm leading-relaxed">
+        <h3 class="text-lg font-bold text-white">Karategui Tusah Clásico 7.5 oz – WKF Approved</h3>
         <p>
-          En <strong>Mx Pro Fighter</strong> confeccionamos cada par con cuero genuino seleccionado y costuras dobles reforzadas con hilo de alta tenacidad. El forro interior transpirable evita la acumulación de humedad y malos olores, mientras que el relleno multicapa de látex distribuye la fuerza del golpeo protegiendo nudillos y muñecas en cada asalto.
+          El <strong class="text-white">Karategui Tusah Clásico 7.5 oz</strong> es el uniforme de karate de referencia para quienes buscan ligereza, comodidad y aprobación oficial de la <strong class="text-amber-400">WKF (World Karate Federation)</strong>. Ideal tanto para clases de entrenamiento como para competencias de nivel local, regional y nacional.
         </p>
+        <p>
+          Fabricado con tejido de <strong class="text-white">7.5 onzas</strong>, ofrece el equilibrio perfecto entre peso ligero y durabilidad. Su corte clásico de cuello en V, el ojillo de cinturón reforzado y las costuras dobles garantizan libertad de movimiento y larga vida útil.
+        </p>
+        <ul class="space-y-2 list-none">
+          <li class="flex items-start gap-2"><span class="text-red-500 font-bold mt-0.5">✓</span> Aprobado oficialmente por la WKF para competencia</li>
+          <li class="flex items-start gap-2"><span class="text-red-500 font-bold mt-0.5">✓</span> Tejido ligero de 7.5 oz — transpirable y de rápido secado</li>
+          <li class="flex items-start gap-2"><span class="text-red-500 font-bold mt-0.5">✓</span> Costuras dobles reforzadas en áreas de alta tensión</li>
+          <li class="flex items-start gap-2"><span class="text-red-500 font-bold mt-0.5">✓</span> Cuello en V clásico con ojillo de cinturón resistente</li>
+          <li class="flex items-start gap-2"><span class="text-red-500 font-bold mt-0.5">✓</span> Disponible en tallas 000 (130 cm) hasta 7 (210+ cm)</li>
+          <li class="flex items-start gap-2"><span class="text-red-500 font-bold mt-0.5">✓</span> Marca Tusah — líder en artes marciales en México</li>
+        </ul>
+      </div>
+
+      <!-- Tab: Especificaciones -->
+      <div id="content-specs" class="hidden py-6">
+        <h3 class="text-lg font-bold text-white mb-4">Especificaciones Técnicas</h3>
+        <div class="overflow-x-auto rounded-xl border border-brand-border">
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-brand-border">
+                <td class="py-3 px-4 font-bold text-slate-300 bg-slate-900/50 w-40">Marca</td>
+                <td class="py-3 px-4 text-white">Tusah</td>
+              </tr>
+              <tr class="border-b border-brand-border">
+                <td class="py-3 px-4 font-bold text-slate-300 bg-slate-900/50">SKU</td>
+                <td class="py-3 px-4 text-white font-mono">5222-224</td>
+              </tr>
+              <tr class="border-b border-brand-border">
+                <td class="py-3 px-4 font-bold text-slate-300 bg-slate-900/50">Gramaje</td>
+                <td class="py-3 px-4 text-white">7.5 oz</td>
+              </tr>
+              <tr class="border-b border-brand-border">
+                <td class="py-3 px-4 font-bold text-slate-300 bg-slate-900/50">Homologación</td>
+                <td class="py-3 px-4"><span class="px-2 py-0.5 bg-red-600/20 border border-red-600/40 text-red-400 rounded font-bold text-xs">WKF Approved</span></td>
+              </tr>
+              <tr class="border-b border-brand-border">
+                <td class="py-3 px-4 font-bold text-slate-300 bg-slate-900/50">Color</td>
+                <td class="py-3 px-4 text-white">Blanco</td>
+              </tr>
+              <tr class="border-b border-brand-border">
+                <td class="py-3 px-4 font-bold text-slate-300 bg-slate-900/50">Deporte</td>
+                <td class="py-3 px-4 text-white">Karate (Kata y Kumite)</td>
+              </tr>
+              <tr class="border-b border-brand-border">
+                <td class="py-3 px-4 font-bold text-slate-300 bg-slate-900/50">Uso recomendado</td>
+                <td class="py-3 px-4 text-white">Entrenamiento y Competencia oficial</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 font-bold text-slate-300 bg-slate-900/50">Precio</td>
+                <td class="py-3 px-4 text-white font-black text-lg">$600 MXN</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab: Guía de Tallas -->
+      <div id="content-tallas" class="hidden py-6" id="guia-tallas">
+        <h3 class="text-lg font-bold text-white mb-4">Guía de Tallas – Sistema Artes Marciales</h3>
+        <p class="text-sm text-slate-400 mb-4">Las tallas se basan en la estatura del practicante. Selecciona la talla cuya estatura coincida con la tuya o la del practicante.</p>
+        <div class="overflow-x-auto rounded-xl border border-brand-border">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-red-600/20 border-b border-brand-border">
+                <th class="py-3 px-4 text-left font-black text-white">Talla</th>
+                <th class="py-3 px-4 text-left font-black text-white">Estatura (aprox.)</th>
+                <th class="py-3 px-4 text-left font-black text-white">Perfil</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-border">
+              <tr><td class="py-3 px-4 font-bold text-white">000</td><td class="py-3 px-4 text-slate-300">130 cm</td><td class="py-3 px-4 text-slate-400">Niños pequeños</td></tr>
+              <tr><td class="py-3 px-4 font-bold text-white">00</td><td class="py-3 px-4 text-slate-300">140 cm</td><td class="py-3 px-4 text-slate-400">Niños</td></tr>
+              <tr><td class="py-3 px-4 font-bold text-white">0</td><td class="py-3 px-4 text-slate-300">150 cm</td><td class="py-3 px-4 text-slate-400">Infantil/Juvenil</td></tr>
+              <tr><td class="py-3 px-4 font-bold text-white">1</td><td class="py-3 px-4 text-slate-300">160 cm</td><td class="py-3 px-4 text-slate-400">Juvenil/Adulto pequeño</td></tr>
+              <tr><td class="py-3 px-4 font-bold text-white">2</td><td class="py-3 px-4 text-slate-300">170 cm</td><td class="py-3 px-4 text-slate-400">Adulto promedio</td></tr>
+              <tr><td class="py-3 px-4 font-bold text-white">3</td><td class="py-3 px-4 text-slate-300">180 cm</td><td class="py-3 px-4 text-slate-400">Adulto alto</td></tr>
+              <tr><td class="py-3 px-4 font-bold text-white">4</td><td class="py-3 px-4 text-slate-300">190 cm</td><td class="py-3 px-4 text-slate-400">Adulto muy alto</td></tr>
+              <tr><td class="py-3 px-4 font-bold text-white">5</td><td class="py-3 px-4 text-slate-300">200 cm</td><td class="py-3 px-4 text-slate-400">Talla extra grande</td></tr>
+              <tr><td class="py-3 px-4 font-bold text-white">6 – 7</td><td class="py-3 px-4 text-slate-300">210+ cm</td><td class="py-3 px-4 text-slate-400">Consultar disponibilidad</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-3 text-xs text-slate-500">¿Tienes duda sobre tu talla? Escríbenos por WhatsApp y te asesoramos.</p>
+      </div>
+
+      <!-- Tab: Mayoreo -->
+      <div id="content-mayoreo" class="hidden py-6 space-y-4 text-sm text-slate-300">
+        <h3 class="text-lg font-bold text-white">Condiciones de Mayoreo Mixto</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-emerald-950/40 border border-emerald-800/50">
+            <p class="font-black text-emerald-400 text-base mb-1">5% OFF Extra</p>
+            <p>En compras de 5 piezas o más pagando en <strong class="text-white">efectivo o transferencia</strong>. Se puede combinar artículos de distintas categorías.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-amber-950/40 border border-amber-800/50">
+            <p class="font-black text-amber-400 text-base mb-1">Regalos por Mayoreo</p>
+            <p>En ciertas combinaciones puedes recibir artículos de regalo. Consulta por WhatsApp las promociones vigentes.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-red-950/40 border border-red-800/50">
+            <p class="font-black text-red-400 text-base mb-1">3 MSI</p>
+            <p>En compras de <strong class="text-white">$10,000 MXN o más</strong> aplica hasta 3 meses sin intereses con tarjeta de crédito.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-blue-950/40 border border-blue-800/50">
+            <p class="font-black text-blue-400 text-base mb-1">Pick Up Express</p>
+            <p>Reserva tu pedido mayoreo un día antes y recógelo listo en los Locales 64 y 73, Centro Histórico CDMX.</p>
+          </div>
+        </div>
+        <a href="https://wa.me/5215620304320?text=Hola%2C%20quiero%20cotizar%20un%20pedido%20mayoreo%20de%20Karategui%20Tusah%20Cl%C3%A1sico%207.5%20oz%20u%20otros%20art%C3%ADculos" target="_blank" class="inline-flex items-center gap-2 mt-2 px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-sm transition">
+          💬 Cotizar Mayoreo por WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS RELACIONADOS -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-black text-white mb-2">Productos Relacionados</h2>
+      <p class="text-sm text-slate-400 mb-8">Completa tu equipo con estos artículos del catálogo</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Karategui Tusah Kata 12 oz -->
+        <article class="bg-brand-dark rounded-2xl border border-brand-border hover:border-amber-500 transition-all duration-300 flex flex-col group overflow-hidden shadow-lg">
+          <div class="relative bg-slate-950 h-48 flex items-center justify-center overflow-hidden border-b border-brand-border">
+            <span class="absolute top-3 left-3 px-2 py-0.5 rounded-full text-[10px] font-black uppercase bg-amber-500 text-slate-950 shadow">WKF • 12 oz</span>
+            <img src="https://www.asianatusah.shop/wp-content/uploads/2026/03/karategui-kata-12-oz-350x435.png" alt="Karategui Tusah Kata 12 oz" class="max-h-36 object-contain group-hover:scale-105 transition-transform duration-300" onerror="this.outerHTML='<div class=\'text-5xl\'>🥋</div>'">
+          </div>
+          <div class="p-4 flex flex-col flex-grow justify-between space-y-3">
+            <div>
+              <span class="text-[10px] text-amber-500 font-bold uppercase">TUSAH • KARATE • SKU: 5222-223</span>
+              <h3 class="font-bold text-white mt-1">Karategui Tusah Kata 12 oz</h3>
+              <p class="text-xs text-slate-400 mt-1">Para kata de competencia. Mayor gramaje para presentación y movimiento.</p>
+            </div>
+            <div class="pt-2 border-t border-brand-border flex items-center justify-between">
+              <span class="text-lg font-black text-white">$1,600 MXN</span>
+              <button onclick="cotizarWhatsApp('Karategui Tusah Kata 12 oz', 'SKU 5222-223', '$1600 MXN')" class="px-3 py-1.5 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded-lg transition">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Nudillera Tusah Sin Dedo -->
+        <article class="bg-brand-dark rounded-2xl border border-brand-border hover:border-red-500 transition-all duration-300 flex flex-col group overflow-hidden shadow-lg">
+          <div class="relative bg-slate-950 h-48 flex items-center justify-center overflow-hidden border-b border-brand-border">
+            <span class="absolute top-3 left-3 px-2 py-0.5 rounded-full text-[10px] font-black uppercase bg-red-600 text-white shadow">Protección</span>
+            <img src="https://www.asianatusah.shop/wp-content/uploads/2026/02/KM-661-22-BLUE-1-2-1.png" alt="Nudillera Tusah Sin Dedo" class="max-h-36 object-contain group-hover:scale-105 transition-transform duration-300" onerror="this.outerHTML='<div class=\'text-5xl\'>🥊</div>'">
+          </div>
+          <div class="p-4 flex flex-col flex-grow justify-between space-y-3">
+            <div>
+              <span class="text-[10px] text-red-500 font-bold uppercase">TUSAH • KARATE • SKU: 265-1-1</span>
+              <h3 class="font-bold text-white mt-1">Nudillera Tusah Sin Dedo</h3>
+              <p class="text-xs text-slate-400 mt-1">Protección de nudillos homologada WKF para competencia y entrenamiento.</p>
+            </div>
+            <div class="pt-2 border-t border-brand-border flex items-center justify-between">
+              <span class="text-lg font-black text-white">$449 MXN</span>
+              <button onclick="cotizarWhatsApp('Nudillera Tusah Sin Dedo', 'SKU 265-1-1', '$449 MXN')" class="px-3 py-1.5 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded-lg transition">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Judogui Asiana 5 Star Azul -->
+        <article class="bg-brand-dark rounded-2xl border border-brand-border hover:border-blue-500 transition-all duration-300 flex flex-col group overflow-hidden shadow-lg">
+          <div class="relative bg-slate-950 h-48 flex items-center justify-center overflow-hidden border-b border-brand-border">
+            <span class="absolute top-3 left-3 px-2 py-0.5 rounded-full text-[10px] font-black uppercase bg-blue-600 text-white shadow">5 Star</span>
+            <img src="https://www.asianatusah.shop/wp-content/uploads/2021/04/JUDOGUI-5-STAR-AZUL-PERFIL.png" alt="Judogui Asiana 5 Star Azul" class="max-h-36 object-contain group-hover:scale-105 transition-transform duration-300" onerror="this.outerHTML='<div class=\'text-5xl\'>🥋</div>'">
+          </div>
+          <div class="p-4 flex flex-col flex-grow justify-between space-y-3">
+            <div>
+              <span class="text-[10px] text-blue-400 font-bold uppercase">ASIANA • JUDO • SKU: 143</span>
+              <h3 class="font-bold text-white mt-1">Judogui Asiana 5 Star – Azul</h3>
+              <p class="text-xs text-slate-400 mt-1">Judogi de alta calidad, ideal para competencia. Color azul oficial.</p>
+            </div>
+            <div class="pt-2 border-t border-brand-border flex items-center justify-between">
+              <span class="text-lg font-black text-white">$2,599 MXN</span>
+              <button onclick="cotizarWhatsApp('Judogui Asiana 5 Star Azul', 'SKU 143', '$2599 MXN')" class="px-3 py-1.5 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded-lg transition">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pao Tusah Master Curvo -->
+        <article class="bg-brand-dark rounded-2xl border border-brand-border hover:border-emerald-500 transition-all duration-300 flex flex-col group overflow-hidden shadow-lg">
+          <div class="relative bg-slate-950 h-48 flex items-center justify-center overflow-hidden border-b border-brand-border">
+            <span class="absolute top-3 left-3 px-2 py-0.5 rounded-full text-[10px] font-black uppercase bg-emerald-600 text-white shadow">Entrenamiento</span>
+            <img src="https://www.asianatusah.shop/wp-content/uploads/2023/09/384-02-1.jpg" alt="Pao Tusah Master Curvo Vino" class="max-h-36 object-contain group-hover:scale-105 transition-transform duration-300" onerror="this.outerHTML='<div class=\'text-5xl\'>🎯</div>'">
+          </div>
+          <div class="p-4 flex flex-col flex-grow justify-between space-y-3">
+            <div>
+              <span class="text-[10px] text-emerald-400 font-bold uppercase">TUSAH • MMA / TAEKWONDO • SKU: 1330-3</span>
+              <h3 class="font-bold text-white mt-1">Pao Tusah Master Curvo</h3>
+              <p class="text-xs text-slate-400 mt-1">Pao curvo ergonómico para entrenamiento de patadas y combinaciones.</p>
+            </div>
+            <div class="pt-2 border-t border-brand-border flex items-center justify-between">
+              <span class="text-lg font-black text-white">$499 MXN</span>
+              <button onclick="cotizarWhatsApp('Pao Tusah Master Curvo', 'SKU 1330-3', '$499 MXN')" class="px-3 py-1.5 bg-red-600 hover:bg-red-500 text-white text-xs font-bold rounded-lg transition">Cotizar</button>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER CON HORARIOS EXACTOS -->
+  <!-- FOOTER -->
   <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-brand-border mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-brand-border">
-        
+
         <div class="space-y-3">
           <div class="flex items-center gap-2.5">
             <div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white font-black">⚡</div>
             <span class="text-xl font-black text-white">MX PRO <span class="text-red-500">FIGHTER</span></span>
           </div>
           <p class="text-xs text-slate-400">Artículos deportivos, combate, fútbol, natación, yoga, salud ortopédica y fabricación propia.</p>
-          <p class="text-xs text-white">📍 16 de Septiembre #11, Locales 64 y 73, CDMX</p>
+          <a href="https://maps.app.goo.gl/zX3SFAjF4c9jypPaA" target="_blank" class="text-xs text-white hover:text-red-400 transition">📍 16 de Septiembre #11, Locales 64 y 73, CDMX</a>
         </div>
 
         <div class="space-y-2 text-xs">
           <h4 class="font-bold text-white uppercase">Categorías</h4>
-          <p><a href="index.html#categorias" class="hover:text-red-400">Artes Marciales y Combate</a></p>
-          <p><a href="index.html#categorias" class="hover:text-red-400">Deportes &amp; Fitness (Fútbol, Natación, Yoga)</a></p>
-          <p><a href="index.html#categorias" class="hover:text-red-400">Salud y Soporte Ortopédico</a></p>
+          <p><a href="index.html#categorias" class="hover:text-red-400 transition">Artes Marciales y Combate</a></p>
+          <p><a href="index.html#categorias" class="hover:text-red-400 transition">Deportes &amp; Fitness (Fútbol, Natación, Yoga)</a></p>
+          <p><a href="index.html#categorias" class="hover:text-red-400 transition">Salud y Soporte Ortopédico</a></p>
           <p><a href="index.html#categorias" class="text-amber-400 font-bold hover:underline">Fabricación Propia</a></p>
         </div>
 
@@ -338,12 +552,14 @@
           <p>• Todos los métodos de pago aceptados</p>
         </div>
 
-        <!-- Horarios Exactos en PDP -->
         <div class="space-y-2 bg-brand-surface p-4 rounded-xl border border-brand-border text-xs">
           <h4 class="font-black text-amber-400 uppercase">Horarios de Atención</h4>
-          <p><strong class="text-slate-300">Lunes a Viernes:</strong> 10:00 AM - 7:00 PM</p>
-          <p><strong class="text-slate-300">Sábados:</strong> 10:00 AM - 8:00 PM</p>
-          <p><strong class="text-amber-400">Domingos:</strong> 11:00 AM - 5:00 PM</p>
+          <p><strong class="text-slate-300">Lunes a Viernes:</strong> 10:00 AM – 7:00 PM</p>
+          <p><strong class="text-slate-300">Sábados:</strong> 10:00 AM – 8:00 PM</p>
+          <p><strong class="text-amber-400">Domingos:</strong> 11:00 AM – 5:00 PM</p>
+          <a href="https://wa.me/5215620304320" target="_blank" class="mt-2 flex items-center gap-2 text-emerald-400 font-bold hover:underline">
+            💬 +52 1 56 2030 4320
+          </a>
         </div>
 
       </div>
@@ -356,10 +572,79 @@
   </footer>
 
   <script>
+    // Menú móvil
     const pdpToggle = document.getElementById('pdp-toggle');
     const pdpMenu = document.getElementById('pdp-menu');
     if (pdpToggle) {
       pdpToggle.addEventListener('click', () => pdpMenu.classList.toggle('hidden'));
+    }
+
+    // Cambiar imagen principal desde galería
+    function cambiarImagen(src, btn) {
+      const img = document.getElementById('pdp-img');
+      const fallback = document.getElementById('pdp-fallback');
+      img.src = src;
+      img.style.display = 'block';
+      fallback.style.display = 'none';
+      document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function cambiarEmoji(emoji, btn) {
+      const img = document.getElementById('pdp-img');
+      const fallback = document.getElementById('pdp-fallback');
+      img.style.display = 'none';
+      fallback.innerText = emoji;
+      fallback.style.display = 'flex';
+      document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    // Selector de talla
+    function seleccionarTalla(btn, label) {
+      document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      document.getElementById('pdp-talla').textContent = label;
+    }
+
+    // Pestañas
+    const tabs = ['desc', 'specs', 'tallas', 'mayoreo'];
+    function mostrarTab(id) {
+      tabs.forEach(t => {
+        document.getElementById('tab-' + t).classList.remove('active');
+        document.getElementById('tab-' + t).classList.add('text-slate-400');
+        document.getElementById('tab-' + t).classList.remove('text-red-500', 'border-red-500');
+        document.getElementById('tab-' + t).style.borderBottomColor = 'transparent';
+        document.getElementById('content-' + t).classList.add('hidden');
+      });
+      document.getElementById('tab-' + id).classList.add('active');
+      document.getElementById('tab-' + id).classList.remove('text-slate-400');
+      document.getElementById('tab-' + id).classList.add('text-red-500');
+      document.getElementById('tab-' + id).style.borderBottomColor = '#ef4444';
+      document.getElementById('content-' + id).classList.remove('hidden');
+    }
+
+    // Botón principal de WhatsApp con talla seleccionada
+    function pedirPorWhatsApp() {
+      const talla = document.getElementById('pdp-talla').textContent;
+      const mensaje = encodeURIComponent(
+        `Hola, me interesa el Karategui Tusah Clásico 7.5 oz – WKF Approved (SKU: 5222-224).\n` +
+        `Talla seleccionada: ${talla}\n` +
+        `Precio: $600 MXN\n` +
+        `¿Está disponible y puedo hacer Pick Up?`
+      );
+      window.open('https://wa.me/5215620304320?text=' + mensaje, '_blank');
+    }
+
+    // Cotizar producto relacionado por WhatsApp
+    function cotizarWhatsApp(nombre, sku, precio) {
+      const mensaje = encodeURIComponent(
+        `Hola, me interesa el producto:\n` +
+        `${nombre} (${sku})\n` +
+        `Precio: ${precio}\n` +
+        `¿Está disponible en tienda?`
+      );
+      window.open('https://wa.me/5215620304320?text=' + mensaje, '_blank');
     }
   </script>
 
